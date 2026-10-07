@@ -1,0 +1,78 @@
+{
+  "name": "AXON",
+  "taglineEn": "Your Daily Partner",
+  "descriptor": "Creative Design Firm",
+  "seoTitle": "AXON 台灣亞上｜品牌識別・ESG 永續報告書設計｜台中",
+  "tagline": "每一天的設計夥伴",
+  "subline": "品牌識別、ESG 永續報告書與商業設計，從策略到每一個細節，陪品牌走得長遠。",
+  "intro": "AXON 台灣亞上是位於台中的設計公司，服務範圍涵蓋品牌識別、ESG 永續報告書、商業設計、活動企劃與網頁規劃。\n\n我們相信設計要先理解，再表現：先釐清品牌與企業想傳達的價值，再把它轉化成清楚、一致、能被執行的視覺。",
+  "email": "Sirius.chen@axon-tw.com",
+  "phone": "04-2327 6999",
+  "address": "40352 台中市西區大業北路7號7樓",
+  "line": "https://line.me/ti/p/~0952827555",
+  "instagram": "",
+  "facebook": "",
+  "services": [
+    {
+      "title": "ESG 永續報告書設計",
+      "body": "依 GRI 等準則架構規劃章節與資訊層級，把大量數據與文字整理成易讀的圖表與版面，兼顧揭露完整與閱讀體驗。"
+    },
+    {
+      "title": "品牌識別",
+      "body": "LOGO、標準字、標準色與應用規範，建立一致、可長期使用的品牌系統。"
+    },
+    {
+      "title": "商業設計",
+      "body": "型錄、DM、海報、包裝與各式印刷品，從企劃、設計到印製監修。"
+    },
+    {
+      "title": "活動企劃",
+      "body": "活動主視覺與現場延伸物規劃，讓活動從宣傳到現場都有一致的樣貌。"
+    },
+    {
+      "title": "網頁規劃",
+      "body": "網站架構、版面與視覺設計，讓品牌在線上也清楚好懂。"
+    }
+  ],
+  "categories": [
+    {
+      "name": "ESG／永續報告書設計",
+      "en": "ESG Report Design"
+    },
+    {
+      "name": "指標系統設計",
+      "en": "Wayfinding System Design"
+    },
+    {
+      "name": "品牌重塑",
+      "en": "Rebranding"
+    },
+    {
+      "name": "品牌識別",
+      "en": "CIS"
+    },
+    {
+      "name": "視覺設計",
+      "en": "Visual Design"
+    },
+    {
+      "name": "包裝設計",
+      "en": "Package Design"
+    },
+    {
+      "name": "網站設計",
+      "en": "Web Design"
+    },
+    {
+      "name": "品牌設計",
+      "en": "Brand Design"
+    },
+    {
+      "name": "動態設計",
+      "en": "Motion Graphics"
+    }
+  ],
+  "company": "台灣亞上有限公司",
+  "logo": "images/brand/logo-white.svg",
+  "taxId": "25184510"
+}

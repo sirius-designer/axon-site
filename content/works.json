@@ -1,0 +1,117 @@
+{
+  "works": [
+    {
+      "slug": "sample-esg-report",
+      "title": "某某企業 2025 永續報告書",
+      "client": "某某企業",
+      "categories": [
+        "ESG／永續報告書設計",
+        "視覺設計"
+      ],
+      "year": "2026",
+      "featured": true,
+      "cover": "images/uploads/books.svg",
+      "images": [
+        "images/uploads/detail1.svg",
+        "images/uploads/detail2.svg"
+      ],
+      "description": "示範用作品：報告書章節架構規劃、數據圖表設計與全書版面編排。請在後台替換成實際案例。"
+    },
+    {
+      "slug": "shanlan-tea",
+      "title": "山嵐茶室．品牌識別",
+      "client": "山嵐茶室",
+      "categories": [
+        "品牌識別",
+        "品牌設計"
+      ],
+      "year": "2026",
+      "featured": true,
+      "cover": "images/uploads/tea.svg",
+      "images": [
+        "images/uploads/detail1.svg",
+        "images/uploads/detail2.svg"
+      ],
+      "description": "為一間以台灣高山茶為主的茶室建立品牌。標誌取自山稜與茶葉的輪廓，色彩來自清晨的霧。"
+    },
+    {
+      "slug": "qingtian-books",
+      "title": "青田書店〈秋季選書〉型錄",
+      "client": "青田書店",
+      "categories": [
+        "視覺設計"
+      ],
+      "year": "2026",
+      "featured": true,
+      "cover": "images/uploads/books.svg",
+      "images": [
+        "images/uploads/detail2.svg"
+      ],
+      "description": "每季一冊的選書型錄，以留白與單色印刷呈現書本本身。"
+    },
+    {
+      "slug": "xiaori-bakery",
+      "title": "小日麵包．包裝設計",
+      "client": "小日麵包",
+      "categories": [
+        "包裝設計",
+        "品牌設計"
+      ],
+      "year": "2025",
+      "featured": true,
+      "cover": "images/uploads/bread.svg",
+      "images": [
+        "images/uploads/detail1.svg"
+      ],
+      "description": "牛皮紙袋搭配單色印章，讓每天出爐的麵包有一致又親切的樣子。"
+    },
+    {
+      "slug": "autumn-market",
+      "title": "2025 秋日市集．主視覺",
+      "client": "某某文化基金會",
+      "categories": [
+        "視覺設計",
+        "動態設計"
+      ],
+      "year": "2025",
+      "featured": true,
+      "cover": "images/uploads/market.svg",
+      "images": [
+        "images/uploads/detail2.svg"
+      ],
+      "description": "主視覺海報與旗幟、攤位指引等延伸物。"
+    },
+    {
+      "slug": "forest-trail-map",
+      "title": "森林步道．導覽地圖",
+      "client": "某某森林遊樂區",
+      "categories": [
+        "指標系統設計",
+        "視覺設計"
+      ],
+      "year": "2024",
+      "featured": false,
+      "cover": "images/uploads/trail.svg",
+      "images": [
+        "images/uploads/detail1.svg"
+      ],
+      "description": "手繪步道地圖，標示動植物觀察點與休息站。"
+    },
+    {
+      "slug": "yuanmu-furniture",
+      "title": "原木家具．企業識別",
+      "client": "原木家具",
+      "categories": [
+        "品牌重塑",
+        "品牌識別"
+      ],
+      "year": "2024",
+      "featured": false,
+      "cover": "images/uploads/wood.svg",
+      "images": [
+        "images/uploads/detail2.svg"
+      ],
+      "description": "名片、型錄封面與門市招牌的整體識別系統。"
+    }
+  ]
+}
