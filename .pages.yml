@@ -46,6 +46,11 @@ content:
                 type: select
                 options:
                   values: ["1", "2", "3"]
+              - name: ratio
+                label: 圖片比例（圖片區塊用；固定比例會自動裁切置中）
+                type: select
+                options:
+                  values: [原比例, 正方形 1:1, 橫式 3:2, 直式 4:5]
               - { name: caption, label: 圖片說明（選填）, type: string }
               - name: imageSide
                 label: 圖片位置（圖文並排用）

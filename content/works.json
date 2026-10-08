@@ -63,7 +63,8 @@
             "images/uploads/bread.svg"
           ],
           "columns": "3",
-          "caption": "左起：章節扉頁、數據圖表、利害關係人議合流程"
+          "caption": "左起：章節扉頁、數據圖表、利害關係人議合流程",
+          "ratio": "橫式 3:2"
         }
       ]
     },

@@ -112,7 +112,8 @@ const BLOCKS = {
     }).join("")}</dl>`,
   "圖片": b => {
     const n = Math.min(Math.max(parseInt(b.columns) || (b.images || []).length || 1, 1), 3);
-    return `<figure class="b-images cols-${n}">${imgs(b.images)}${b.caption ? `<figcaption>${inline(b.caption)}</figcaption>` : ""}</figure>`;
+    const r = { "正方形 1:1": "r-1-1", "橫式 3:2": "r-3-2", "直式 4:5": "r-4-5" }[b.ratio] || "";
+    return `<figure class="b-images cols-${n} ${r}">${imgs(b.images)}${b.caption ? `<figcaption>${inline(b.caption)}</figcaption>` : ""}</figure>`;
   },
   "圖文並排": b => `<div class="b-split ${b.imageSide === "右" ? "img-right" : ""}"><div class="b-split-img">${imgs((b.images || []).slice(0, 1))}</div><div class="b-split-text">${paras(b.text)}</div></div>`,
   "分隔線": () => `<hr class="b-rule">`,
