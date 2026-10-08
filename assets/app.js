@@ -7,10 +7,10 @@ const catsOf = w => w.categories || (w.category ? [w.category] : []);
 const catLabel = c => `${esc(c)}${EN[c] ? ` <span class="en">${esc(EN[c])}</span>` : ""}`;
 
 const NAV = [
-  ["works.html", "作品", "works"],
-  ["services.html", "服務", "services"],
-  ["about.html", "關於", "about"],
-  ["contact.html", "聯絡", "contact"],
+  ["works", "作品", "works"],
+  ["services", "服務", "services"],
+  ["about", "關於", "about"],
+  ["contact", "聯絡", "contact"],
 ];
 
 async function load() {
@@ -28,7 +28,7 @@ async function load() {
 function chrome(site) {
   document.body.insertAdjacentHTML("afterbegin", `
     <header class="banner">
-      <a class="home" href="index.html" aria-label="${esc(site.name)} 首頁">
+      <a class="home" href="/" aria-label="${esc(site.name)} 首頁">
         ${site.logo ? `<img class="logo" src="${esc(site.logo)}" alt="${esc(site.name)}">` : `<span class="home-text">${esc(site.name)}</span>`}
       </a>
       <nav class="topbar" aria-label="主選單">
@@ -52,7 +52,7 @@ function chrome(site) {
 }
 
 const card = w => `
-  <a class="card" href="work.html?w=${encodeURIComponent(w.slug)}">
+  <a class="card" href="work?w=${encodeURIComponent(w.slug)}">
     <img src="${esc(w.cover)}" alt="${esc(w.title)}" loading="lazy">
     <p class="cat">${catsOf(w).map(esc).join("、")}｜${esc(w.client)}</p>
     <h3 class="ttl">${esc(w.title)}</h3>
@@ -69,7 +69,7 @@ function home(site, works) {
       ${site.subline ? `<p class="hero-sub">${esc(site.subline)}</p>` : ""}
     </section>
     <div class="grid">${(featured.length ? featured : works.slice(0, 6)).map(card).join("")}</div>
-    <a class="more" href="works.html">看全部作品</a>`;
+    <a class="more" href="works">看全部作品</a>`;
 }
 
 function worksPage(site, works) {
@@ -122,7 +122,7 @@ const BLOCKS = {
 function work(site, works) {
   const slug = new URLSearchParams(location.search).get("w");
   const i = works.findIndex(w => w.slug === slug);
-  if (i < 0) { main().innerHTML = `<p class="notice">找不到這件作品。<a class="more" href="works.html">回到作品列表</a></p>`; return; }
+  if (i < 0) { main().innerHTML = `<p class="notice">找不到這件作品。<a class="more" href="works">回到作品列表</a></p>`; return; }
   const w = works[i];
   const prev = works[i - 1], next = works[i + 1];
   document.title = w.title + document.title.slice(document.title.indexOf("｜"));
@@ -140,7 +140,7 @@ function work(site, works) {
           <h1>${esc(w.title)}</h1>
           <dl class="meta">
             <dt>客戶</dt><dd>${esc(w.client)}</dd>
-            <dt>類別</dt><dd>${catsOf(w).map(c => `<a href="works.html?c=${encodeURIComponent(c)}">${catLabel(c)}</a>`).join("<br>")}</dd>
+            <dt>類別</dt><dd>${catsOf(w).map(c => `<a href="works?c=${encodeURIComponent(c)}">${catLabel(c)}</a>`).join("<br>")}</dd>
             ${w.year ? `<dt>年份</dt><dd>${esc(w.year)}</dd>` : ""}
           </dl>
         </div>
@@ -148,8 +148,8 @@ function work(site, works) {
       </div>
       ${body}
       <nav class="pager" aria-label="其他作品">
-        <span>${prev ? `<a href="work.html?w=${encodeURIComponent(prev.slug)}">上一件：${esc(prev.title)}</a>` : ""}</span>
-        <span>${next ? `<a href="work.html?w=${encodeURIComponent(next.slug)}">下一件：${esc(next.title)}</a>` : ""}</span>
+        <span>${prev ? `<a href="work?w=${encodeURIComponent(prev.slug)}">上一件：${esc(prev.title)}</a>` : ""}</span>
+        <span>${next ? `<a href="work?w=${encodeURIComponent(next.slug)}">下一件：${esc(next.title)}</a>` : ""}</span>
       </nav>
     </article>`;
 }
