@@ -27,8 +27,32 @@ content:
           - { name: year, label: 年份, type: string }
           - { name: featured, label: 顯示在首頁, type: boolean }
           - { name: cover, label: 封面圖, type: image }
-          - { name: images, label: 內頁圖片, type: image, list: true }
-          - { name: description, label: 專案說明, type: text }
+          - { name: description, label: 專案簡介（顯示在標題旁，可留空）, type: text }
+          - name: blocks
+            label: 內頁版面（依序堆疊；有加區塊時，下方「舊版內頁圖片」不會顯示）
+            type: object
+            list: true
+            fields:
+              - name: type
+                label: 區塊類型
+                type: select
+                required: true
+                options:
+                  values: [標題, 文字, 製作名單, 圖片, 圖文並排, 分隔線]
+              - { name: text, label: 文字（標題／文字／製作名單／圖文並排用；製作名單每行寫「職稱｜名字」；**粗體**）, type: text }
+              - { name: images, label: 圖片（圖片／圖文並排用）, type: image, list: true }
+              - name: columns
+                label: 圖片欄數（圖片區塊用）
+                type: select
+                options:
+                  values: ["1", "2", "3"]
+              - { name: caption, label: 圖片說明（選填）, type: string }
+              - name: imageSide
+                label: 圖片位置（圖文並排用）
+                type: select
+                options:
+                  values: [左, 右]
+          - { name: images, label: 舊版內頁圖片（沒有使用內頁版面時才顯示）, type: image, list: true }
 
   - name: site
     label: 網站資訊

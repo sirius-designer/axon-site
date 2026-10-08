@@ -99,6 +99,25 @@ function worksPage(site, works) {
   draw();
 }
 
+// 內容區塊：行內格式（**粗體**、換行）
+const inline = (s = "") => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br>");
+const paras = (s = "") => s.split(/\n\s*\n/).map(p => `<p>${inline(p)}</p>`).join("");
+const imgs = (list = [], alt = "") => list.filter(Boolean).map(src => `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy">`).join("");
+
+const BLOCKS = {
+  "標題": b => `<h2 class="b-heading">${inline(b.text)}</h2>`,
+  "文字": b => `<div class="b-text">${paras(b.text)}</div>`,
+  "製作名單": b => `<dl class="b-credits">${(b.text || "").split("\n").filter(l => l.trim()).map(l => {
+      const [k, ...v] = l.split(/[｜|]/); return v.length ? `<dt>${esc(k.trim())}</dt><dd>${esc(v.join("｜").trim())}</dd>` : `<dd class="full">${esc(l)}</dd>`;
+    }).join("")}</dl>`,
+  "圖片": b => {
+    const n = Math.min(Math.max(parseInt(b.columns) || (b.images || []).length || 1, 1), 3);
+    return `<figure class="b-images cols-${n}">${imgs(b.images)}${b.caption ? `<figcaption>${inline(b.caption)}</figcaption>` : ""}</figure>`;
+  },
+  "圖文並排": b => `<div class="b-split ${b.imageSide === "右" ? "img-right" : ""}"><div class="b-split-img">${imgs((b.images || []).slice(0, 1))}</div><div class="b-split-text">${paras(b.text)}</div></div>`,
+  "分隔線": () => `<hr class="b-rule">`,
+};
+
 function work(site, works) {
   const slug = new URLSearchParams(location.search).get("w");
   const i = works.findIndex(w => w.slug === slug);
@@ -106,6 +125,13 @@ function work(site, works) {
   const w = works[i];
   const prev = works[i - 1], next = works[i + 1];
   document.title = w.title + document.title.slice(document.title.indexOf("｜"));
+  const blocks = (w.blocks || []).filter(b => b && BLOCKS[b.type]);
+  const body = blocks.length
+    ? `<div class="blocks">${blocks.map(b => BLOCKS[b.type](b)).join("")}</div>`
+    : `<div class="work-images">
+        <img src="${esc(w.cover)}" alt="${esc(w.title)}">
+        ${(w.images || []).map(src => `<img src="${esc(src)}" alt="" loading="lazy">`).join("")}
+      </div>`;
   main().innerHTML = `
     <article>
       <div class="work-head">
@@ -119,10 +145,7 @@ function work(site, works) {
         </div>
         <div class="work-desc">${nl2p(w.description)}</div>
       </div>
-      <div class="work-images">
-        <img src="${esc(w.cover)}" alt="${esc(w.title)}">
-        ${(w.images || []).map(src => `<img src="${esc(src)}" alt="" loading="lazy">`).join("")}
-      </div>
+      ${body}
       <nav class="pager" aria-label="其他作品">
         <span>${prev ? `<a href="work.html?w=${encodeURIComponent(prev.slug)}">上一件：${esc(prev.title)}</a>` : ""}</span>
         <span>${next ? `<a href="work.html?w=${encodeURIComponent(next.slug)}">下一件：${esc(next.title)}</a>` : ""}</span>

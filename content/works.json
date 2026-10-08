@@ -15,7 +15,57 @@
         "images/uploads/detail1.svg",
         "images/uploads/detail2.svg"
       ],
-      "description": "示範用作品：報告書章節架構規劃、數據圖表設計與全書版面編排。請在後台替換成實際案例。"
+      "description": "示範用作品：報告書章節架構規劃、數據圖表設計與全書版面編排。這件作品示範「內頁版面」的各種區塊，請對照後台的填法參考。",
+      "blocks": [
+        {
+          "type": "製作名單",
+          "text": "委託單位｜某某企業\n企劃統籌｜AXON 台灣亞上\n資訊設計｜陳甫宣\n印製｜某某印刷"
+        },
+        {
+          "type": "圖片",
+          "images": [
+            "images/uploads/books.svg"
+          ],
+          "columns": "1"
+        },
+        {
+          "type": "標題",
+          "text": "把三百頁的揭露，變成讀得下去的報告"
+        },
+        {
+          "type": "文字",
+          "text": "永續報告書的難處不在資料，而在**閱讀**。我們先依 GRI 準則重整章節順序，再把重複的敘述收斂成圖表，讓讀者在三分鐘內掌握企業的重大議題。\n\n每一章以一頁摘要開場，數據則統一使用同一套圖表語言。"
+        },
+        {
+          "type": "圖片",
+          "images": [
+            "images/uploads/tea.svg",
+            "images/uploads/wood.svg"
+          ],
+          "columns": "2"
+        },
+        {
+          "type": "分隔線"
+        },
+        {
+          "type": "圖文並排",
+          "images": [
+            "images/uploads/trail.svg"
+          ],
+          "imageSide": "左",
+          "text": "**資訊圖表系統**\n\n碳排、用水、員工結構等十二類數據，建立共用的色彩與圖示規則，跨年度更新時只需替換數字。"
+        },
+        {
+          "type": "圖片",
+          "images": [
+            "images/uploads/detail1.svg",
+            "images/uploads/detail2.svg",
+            "images/uploads/bread.svg"
+          ],
+          "columns": "3",
+          "caption": "左起：章節扉頁、數據圖表、利害關係人議合流程"
+        }
+      ]
     },
     {
       "slug": "shanlan-tea",
