@@ -144,7 +144,7 @@ function work(site, works) {
             ${w.year ? `<dt>年份</dt><dd>${esc(w.year)}</dd>` : ""}
           </dl>
         </div>
-        <div class="work-desc">${nl2p(w.description)}</div>
+        <div class="work-desc">${paras(w.description)}</div>
       </div>
       ${body}
       <nav class="pager" aria-label="其他作品">

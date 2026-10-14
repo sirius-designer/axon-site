@@ -96,7 +96,7 @@ main { padding: 72px 56px 96px; min-height: 70vh; max-width: 1440px; margin: 0 a
 .b-heading { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.6; letter-spacing: .1em; max-width: 30em; margin-bottom: -24px; }
 .b-text { max-width: 36em; font-size: 15px; }
 .b-text p + p { margin-top: 1.1em; }
-.b-text strong { font-weight: 400; color: var(--ink); box-shadow: inset 0 -.45em 0 rgba(206, 223, 0, .45); }
+.b-text strong, .work-desc strong { font-weight: 400; color: var(--ink); box-shadow: inset 0 -.45em 0 rgba(206, 223, 0, .45); }
 .b-credits { display: grid; grid-template-columns: max-content 1fr; gap: 4px 24px; font-size: 13px; max-width: 40em; }
 .b-credits dt { color: var(--mute); }
 .b-credits .full { grid-column: 1 / -1; }
