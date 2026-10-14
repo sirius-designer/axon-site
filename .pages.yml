@@ -13,7 +13,10 @@ content:
       - name: works
         label: 作品列表
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "作品 {index}｜{title}"
         fields:
           - { name: title, label: 專案名稱, type: string, required: true }
           - { name: slug, label: 網址代稱（英文小寫與連字號，例如 tea-brand）, type: string, required: true }
@@ -31,7 +34,10 @@ content:
           - name: blocks
             label: 內頁版面（依序堆疊；有加區塊時，下方「舊版內頁圖片」不會顯示）
             type: object
-            list: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "▸ 區塊 {index}｜{type}"
             fields:
               - name: type
                 label: 區塊類型
@@ -84,14 +90,20 @@ content:
       - name: categories
         label: 作品分類（中英文名稱與排列順序）
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name} {en}"
         fields:
           - { name: name, label: 中文名稱（需與作品的類別選項一致）, type: string }
           - { name: en, label: 英文名稱, type: string }
       - name: services
         label: 服務項目
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
         fields:
           - { name: title, label: 項目名稱, type: string }
           - { name: body, label: 說明, type: text }
