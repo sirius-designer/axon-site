@@ -1,32 +1,25 @@
 {
   "works": [
     {
-      "slug": "sample-esg-report",
-      "title": "某某企業 2025 永續報告書",
-      "client": "某某企業",
+      "title": "億光電子 2025 ESG永續報告書",
+      "slug": "everlight-esg2025-report",
+      "client": "億光電子工業股份有限公司",
       "categories": [
         "ESG／永續報告書設計",
         "視覺設計"
       ],
       "year": "2026",
       "featured": true,
-      "cover": "images/uploads/books.svg",
-      "images": [
-        "images/uploads/detail1.svg",
-        "images/uploads/detail2.svg"
-      ],
-      "description": "示範用作品：報告書章節架構規劃、數據圖表設計與全書版面編排。這件作品示範「內頁版面」的各種區塊，請對照後台的填法參考。",
+      "cover": "images/uploads/20260717-億光電子-封面提案-final-01.png",
+      "description": "本封面以**光驅動創新，科技連結永續**為設計核心，運用億光品牌藍與純淨留白，傳達專業、信賴與前瞻精神。畫面以流動光束串聯智慧車輛、AI、半導體、能源與智慧生活等科技意象，象徵光電技術推動產業創新，開啟高效、低碳的未來；地球與環繞軌跡則呼應全球布局及永續願景。透過光的延伸、數位網絡的連結與向前流動的視覺動勢，展現億光以創新照亮未來、以科技實踐永續的企業承諾。",
       "blocks": [
-        {
-          "type": "製作名單",
-          "text": "委託單位｜某某企業\n企劃統籌｜AXON 台灣亞上\n資訊設計｜陳甫宣\n印製｜某某印刷"
-        },
         {
           "type": "圖片",
           "images": [
-            "images/uploads/books.svg"
+            "images/uploads/29772672_psd_07.png"
           ],
-          "columns": "1"
+          "columns": "1",
+          "ratio": "原比例"
         },
         {
           "type": "標題",
@@ -49,11 +42,11 @@
         },
         {
           "type": "圖文並排",
+          "text": "**資訊圖表系統**\n\n碳排、用水、員工結構等十二類數據，建立共用的色彩與圖示規則，跨年度更新時只需替換數字。",
           "images": [
             "images/uploads/trail.svg"
           ],
-          "imageSide": "左",
-          "text": "**資訊圖表系統**\n\n碳排、用水、員工結構等十二類數據，建立共用的色彩與圖示規則，跨年度更新時只需替換數字。"
+          "imageSide": "左"
         },
         {
           "type": "圖片",
@@ -63,14 +56,18 @@
             "images/uploads/bread.svg"
           ],
           "columns": "3",
-          "caption": "左起：章節扉頁、數據圖表、利害關係人議合流程",
-          "ratio": "橫式 3:2"
+          "ratio": "橫式 3:2",
+          "caption": "左起：章節扉頁、數據圖表、利害關係人議合流程"
         }
+      ],
+      "images": [
+        "images/uploads/detail1.svg",
+        "images/uploads/detail2.svg"
       ]
     },
     {
-      "slug": "shanlan-tea",
       "title": "山嵐茶室．品牌識別",
+      "slug": "shanlan-tea",
       "client": "山嵐茶室",
       "categories": [
         "品牌識別",
@@ -79,15 +76,15 @@
       "year": "2026",
       "featured": true,
       "cover": "images/uploads/tea.svg",
+      "description": "為一間以台灣高山茶為主的茶室建立品牌。標誌取自山稜與茶葉的輪廓，色彩來自清晨的霧。",
       "images": [
         "images/uploads/detail1.svg",
         "images/uploads/detail2.svg"
-      ],
-      "description": "為一間以台灣高山茶為主的茶室建立品牌。標誌取自山稜與茶葉的輪廓，色彩來自清晨的霧。"
+      ]
     },
     {
-      "slug": "qingtian-books",
       "title": "青田書店〈秋季選書〉型錄",
+      "slug": "qingtian-books",
       "client": "青田書店",
       "categories": [
         "視覺設計"
@@ -95,14 +92,14 @@
       "year": "2026",
       "featured": true,
       "cover": "images/uploads/books.svg",
+      "description": "每季一冊的選書型錄，以留白與單色印刷呈現書本本身。",
       "images": [
         "images/uploads/detail2.svg"
-      ],
-      "description": "每季一冊的選書型錄，以留白與單色印刷呈現書本本身。"
+      ]
     },
     {
-      "slug": "xiaori-bakery",
       "title": "小日麵包．包裝設計",
+      "slug": "xiaori-bakery",
       "client": "小日麵包",
       "categories": [
         "包裝設計",
@@ -111,14 +108,14 @@
       "year": "2025",
       "featured": true,
       "cover": "images/uploads/bread.svg",
+      "description": "牛皮紙袋搭配單色印章，讓每天出爐的麵包有一致又親切的樣子。",
       "images": [
         "images/uploads/detail1.svg"
-      ],
-      "description": "牛皮紙袋搭配單色印章，讓每天出爐的麵包有一致又親切的樣子。"
+      ]
     },
     {
-      "slug": "autumn-market",
       "title": "2025 秋日市集．主視覺",
+      "slug": "autumn-market",
       "client": "某某文化基金會",
       "categories": [
         "視覺設計",
@@ -127,14 +124,14 @@
       "year": "2025",
       "featured": true,
       "cover": "images/uploads/market.svg",
+      "description": "主視覺海報與旗幟、攤位指引等延伸物。",
       "images": [
         "images/uploads/detail2.svg"
-      ],
-      "description": "主視覺海報與旗幟、攤位指引等延伸物。"
+      ]
     },
     {
-      "slug": "forest-trail-map",
       "title": "森林步道．導覽地圖",
+      "slug": "forest-trail-map",
       "client": "某某森林遊樂區",
       "categories": [
         "指標系統設計",
@@ -143,14 +140,14 @@
       "year": "2024",
       "featured": false,
       "cover": "images/uploads/trail.svg",
+      "description": "手繪步道地圖，標示動植物觀察點與休息站。",
       "images": [
         "images/uploads/detail1.svg"
-      ],
-      "description": "手繪步道地圖，標示動植物觀察點與休息站。"
+      ]
     },
     {
-      "slug": "yuanmu-furniture",
       "title": "原木家具．企業識別",
+      "slug": "yuanmu-furniture",
       "client": "原木家具",
       "categories": [
         "品牌重塑",
@@ -159,10 +156,10 @@
       "year": "2024",
       "featured": false,
       "cover": "images/uploads/wood.svg",
+      "description": "名片、型錄封面與門市招牌的整體識別系統。",
       "images": [
         "images/uploads/detail2.svg"
-      ],
-      "description": "名片、型錄封面與門市招牌的整體識別系統。"
+      ]
     }
   ]
 }
