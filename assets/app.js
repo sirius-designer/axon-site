@@ -60,7 +60,6 @@ const card = w => {
     <img src="${esc(w.cover)}" alt="${esc(w.title)}" loading="lazy">
     <h3 class="ttl">${esc(w.title)}</h3>
     ${sub.length ? `<p class="tasks">${sub.map(esc).join("、")}</p>` : ""}
-    ${w.year ? `<p class="yr">${esc(w.year)}</p>` : ""}
     ${w.award ? `<p class="award">${esc(w.award)}</p>` : ""}
   </a>`;
 };
