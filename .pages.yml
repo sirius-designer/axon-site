@@ -27,7 +27,15 @@ content:
             options:
               multiple: true
               values: [ESG／永續報告書設計, 指標系統設計, 品牌重塑, 品牌識別, 視覺設計, 包裝設計, 網站設計, 品牌設計, 動態設計]
+          - name: tasks
+            label: 設計項目（可複選，顯示在作品牆標題下方）
+            type: select
+            options:
+              multiple: true
+              values: [主視覺設計, 封面設計, 插畫繪製, 內頁編排, 資訊圖表設計, 影像修圖, 攝影, LOGO設計, 品牌識別系統, 包裝設計, 印刷監製, 網站設計, 動態影像]
+          - { name: tasksCustom, label: 其他設計項目（選單裡沒有的，按 Add an item 自行新增）, type: string, list: true }
           - { name: year, label: 年份, type: string }
+          - { name: award, label: 獲獎／備註（選填，例如 TCSA 2024企業永續獎-白金級）, type: string }
           - { name: featured, label: 顯示在首頁, type: boolean }
           - { name: cover, label: 封面圖, type: image }
           - { name: description, label: 專案簡介（顯示在標題旁，可留空）, type: text }

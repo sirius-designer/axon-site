@@ -51,12 +51,19 @@ function chrome(site) {
   else document.title = `${document.title}｜${brand}`;
 }
 
-const card = w => `
+// 設計項目：選單勾選＋自行新增的項目；都沒填時改顯示作品類別
+const tasksOf = w => [...(w.tasks || []), ...(w.tasksCustom || [])].map(t => String(t).trim()).filter(Boolean);
+const card = w => {
+  const sub = tasksOf(w).length ? tasksOf(w) : catsOf(w);
+  return `
   <a class="card" href="work?w=${encodeURIComponent(w.slug)}">
     <img src="${esc(w.cover)}" alt="${esc(w.title)}" loading="lazy">
-    <p class="cat">${catsOf(w).map(esc).join("、")}｜${esc(w.client)}</p>
     <h3 class="ttl">${esc(w.title)}</h3>
+    ${sub.length ? `<p class="tasks">${sub.map(esc).join("、")}</p>` : ""}
+    ${w.year ? `<p class="yr">${esc(w.year)}</p>` : ""}
+    ${w.award ? `<p class="award">${esc(w.award)}</p>` : ""}
   </a>`;
+};
 
 const main = () => document.querySelector("main");
 
@@ -141,7 +148,9 @@ function work(site, works) {
           <dl class="meta">
             <dt>客戶</dt><dd>${esc(w.client)}</dd>
             <dt>類別</dt><dd>${catsOf(w).map(c => `<a href="works?c=${encodeURIComponent(c)}">${catLabel(c)}</a>`).join("<br>")}</dd>
+            ${tasksOf(w).length ? `<dt>設計項目</dt><dd>${tasksOf(w).map(esc).join("、")}</dd>` : ""}
             ${w.year ? `<dt>年份</dt><dd>${esc(w.year)}</dd>` : ""}
+            ${w.award ? `<dt>獲獎</dt><dd>${esc(w.award)}</dd>` : ""}
           </dl>
         </div>
         <div class="work-desc">${paras(w.description)}</div>
