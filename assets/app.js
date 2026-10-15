@@ -109,11 +109,13 @@ function worksPage(site, works) {
 const inline = (s = "") => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\n/g, "<br>");
 const paras = (s = "") => s.split(/\n\s*\n/).map(p => `<p>${inline(p)}</p>`).join("");
 const imgs = (list = [], alt = "") => list.filter(Boolean).map(src => `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy">`).join("");
+// 文字幅寬：全幅＝對齊滿版圖片、二分之一＝對齊兩欄圖片的一欄、三分之一＝對齊三欄圖片的一欄（預設二分之一）
+const wcls = b => ({ "全幅": "w-full", "三分之一": "w-third" })[b.width] || "w-half";
 
 const BLOCKS = {
-  "標題": b => `<h2 class="b-heading">${inline(b.text)}</h2>`,
-  "文字": b => `<div class="b-text">${paras(b.text)}</div>`,
-  "製作名單": b => `<dl class="b-credits">${(b.text || "").split("\n").filter(l => l.trim()).map(l => {
+  "標題": b => `<h2 class="b-heading ${wcls(b)}">${inline(b.text)}</h2>`,
+  "文字": b => `<div class="b-text ${wcls(b)}">${paras(b.text)}</div>`,
+  "製作名單": b => `<dl class="b-credits ${wcls(b)}">${(b.text || "").split("\n").filter(l => l.trim()).map(l => {
       const [k, ...v] = l.split(/[｜|]/); return v.length ? `<dt>${esc(k.trim())}</dt><dd>${esc(v.join("｜").trim())}</dd>` : `<dd class="full">${esc(l)}</dd>`;
     }).join("")}</dl>`,
   "圖片": b => {

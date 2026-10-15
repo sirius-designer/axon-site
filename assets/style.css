@@ -98,11 +98,14 @@ main { padding: 72px 56px 96px; min-height: 70vh; max-width: 1440px; margin: 0 a
 
 /* 內容區塊（作品內頁） */
 .blocks { display: grid; gap: 56px; }
-.b-heading { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.6; letter-spacing: .1em; max-width: 30em; margin-bottom: -24px; }
-.b-text { max-width: 36em; font-size: 15px; }
+.b-heading { font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.6; letter-spacing: .1em; margin-bottom: -24px; }
+.b-text { font-size: 15px; }
 .b-text p + p { margin-top: 1.1em; }
 .b-text strong, .work-desc strong { font-weight: 400; color: var(--ink); box-shadow: inset 0 -.45em 0 rgba(206, 223, 0, .45); }
-.b-credits { display: grid; grid-template-columns: max-content 1fr; gap: 4px 24px; font-size: 13px; max-width: 40em; }
+.b-credits { display: grid; grid-template-columns: max-content 1fr; gap: 4px 24px; font-size: 13px; }
+.blocks .w-full { max-width: none; }
+.blocks .w-half { max-width: calc((100% - 24px) / 2); }
+.blocks .w-third { max-width: calc((100% - 48px) / 3); }
 .b-credits dt { color: var(--mute); }
 .b-credits .full { grid-column: 1 / -1; }
 .b-images { display: grid; gap: 24px; margin: 0; }
@@ -158,6 +161,7 @@ footer a:hover { color: var(--ink); }
   .list > div { grid-template-columns: 1fr; gap: 6px; }
   .blocks { gap: 40px; }
   .b-heading { font-size: 20px; margin-bottom: -16px; }
+  .blocks .w-half, .blocks .w-third { max-width: none; }
   .b-images.cols-3 { grid-template-columns: 1fr 1fr; }
   .b-split { grid-template-columns: 1fr; gap: 20px; }
   .b-split.img-right .b-split-img { order: 0; }
