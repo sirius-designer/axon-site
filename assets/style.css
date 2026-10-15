@@ -50,11 +50,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--moss); outline-
 
 main { padding: 72px 56px 96px; min-height: 70vh; max-width: 1440px; margin: 0 auto; }
 
-.hero { margin-bottom: 96px; max-width: 40em; }
+.hero { margin-bottom: 96px; }
 .hero h1 { font-family: var(--serif); font-weight: 400; font-size: 44px; line-height: 1.4; letter-spacing: .12em; }
 .hero-en { margin-top: 10px; font-size: 15px; letter-spacing: .14em; color: var(--mute); }
 .hero-en::before { content: ""; display: inline-block; width: 28px; height: 10px; border-radius: 999px; background: var(--lime); margin-right: 12px; vertical-align: 0; }
-.hero-sub { margin-top: 28px; font-size: 16px; max-width: 30em; }
+.hero-sub { margin-top: 28px; font-size: 16px; }
 .page-title { font-family: var(--serif); font-size: 26px; font-weight: 400; margin-bottom: 40px; letter-spacing: .12em; }
 
 /* Category filter: 中文 + English */
