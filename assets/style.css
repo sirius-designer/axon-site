@@ -40,7 +40,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--moss); outline-
 .banner .logo { height: 30px; width: auto; }
 .banner .home-text { font-size: 22px; letter-spacing: .1em; }
 .topbar { display: flex; gap: 2.2em; font-size: 14px; }
-.topbar a { color: #C9CBCC; padding: 4px 0; border-bottom: 2px solid transparent; }
+.topbar a { display: flex; flex-direction: column; align-items: center; line-height: 1.35; color: #C9CBCC; padding: 4px 0; border-bottom: 2px solid transparent; }
+.topbar .nav-en { font-size: 10px; letter-spacing: .1em; color: var(--gray); }
+.topbar a:hover .nav-en, .topbar a[aria-current="page"] .nav-en { color: #C9CBCC; }
 .topbar a:hover { color: #fff; }
 .topbar a[aria-current="page"] { color: #fff; border-color: var(--lime); }
 .dots { display: grid; grid-template-columns: repeat(3, 7px); gap: 3px; }
@@ -151,6 +153,7 @@ footer a:hover { color: var(--ink); }
   .banner { height: 60px; padding: 0 20px; gap: 18px; }
   .banner .logo { height: 22px; }
   .topbar { gap: 1.2em; font-size: 13px; }
+  .topbar .nav-en { font-size: 9px; letter-spacing: .04em; }
   .dots { display: none; }
   main { padding: 40px 20px 72px; }
   .hero { margin-bottom: 56px; }

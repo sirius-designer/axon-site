@@ -7,10 +7,10 @@ const catsOf = w => w.categories || (w.category ? [w.category] : []);
 const catLabel = c => `${esc(c)}${EN[c] ? ` <span class="en">${esc(EN[c])}</span>` : ""}`;
 
 const NAV = [
-  ["works", "作品", "works"],
-  ["services", "服務", "services"],
-  ["about", "關於", "about"],
-  ["contact", "聯絡", "contact"],
+  ["works", "作品", "works", "Works"],
+  ["services", "服務", "services", "Services"],
+  ["about", "關於", "about", "About"],
+  ["contact", "聯絡", "contact", "Contact"],
 ];
 
 async function load() {
@@ -32,7 +32,7 @@ function chrome(site) {
         ${site.logo ? `<img class="logo" src="${esc(site.logo)}" alt="${esc(site.name)}">` : `<span class="home-text">${esc(site.name)}</span>`}
       </a>
       <nav class="topbar" aria-label="主選單">
-        ${NAV.map(([href, label, key]) => `<a href="${href}"${key === page || (page === "work" && key === "works") ? ' aria-current="page"' : ""}>${label}</a>`).join("")}
+        ${NAV.map(([href, label, key, en]) => `<a href="${href}"${key === page || (page === "work" && key === "works") ? ' aria-current="page"' : ""}><span>${label}</span><span class="nav-en" lang="en">${en}</span></a>`).join("")}
       </nav>
       <span class="dots" aria-hidden="true">${"lgwgwlwlg".split("").map(c => `<i class="${c}"></i>`).join("")}</span>
     </header>`);
