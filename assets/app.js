@@ -85,7 +85,7 @@ function worksPage(site, works) {
   const params = new URLSearchParams(location.search);
   let current = params.get("c") || "";
   main().innerHTML = `
-    <h1 class="page-title">作品</h1>
+    <h1 class="page-title">作品<span class="page-en" lang="en">Works</span></h1>
     <div class="filter" role="group" aria-label="作品分類"></div>
     <div class="grid"></div>`;
   const filter = main().querySelector(".filter");
@@ -166,12 +166,12 @@ function work(site, works) {
 
 function services(site) {
   main().innerHTML = `
-    <h1 class="page-title">服務</h1>
+    <h1 class="page-title">服務<span class="page-en" lang="en">Services</span></h1>
     <div class="list">${(site.services || []).map(s => `<div><h2>${esc(s.title)}</h2><p>${esc(s.body)}</p></div>`).join("")}</div>`;
 }
 
 function about(site) {
-  main().innerHTML = `<h1 class="page-title">關於</h1><div class="prose">${nl2p(site.intro)}</div>`;
+  main().innerHTML = `<h1 class="page-title">關於<span class="page-en" lang="en">About</span></h1><div class="prose">${nl2p(site.intro)}</div>`;
 }
 
 function contact(site) {
@@ -185,7 +185,7 @@ function contact(site) {
       <label class="f-row"><span class="f-label">${label}${req ? '<i aria-hidden="true">*</i>' : ""}</span>
         <input name="${name}" type="${type}" placeholder="${ph}"${req ? " required" : ""}></label>`;
   main().innerHTML = `
-    <h1 class="page-title">聯絡</h1>
+    <h1 class="page-title">聯絡<span class="page-en" lang="en">Contact</span></h1>
     <div class="contact-grid">
       <section class="contact-info">
         <div class="contact-intro">${paras(site.contactIntro || "")}</div>

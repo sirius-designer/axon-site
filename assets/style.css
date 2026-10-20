@@ -58,6 +58,7 @@ main { padding: 72px 56px 96px; min-height: 70vh; max-width: 1440px; margin: 0 a
 .hero-en::before { content: ""; display: inline-block; width: 28px; height: 10px; border-radius: 999px; background: var(--lime); margin-right: 12px; vertical-align: 0; }
 .hero-sub { margin-top: 28px; font-size: 16px; }
 .page-title { font-family: var(--serif); font-size: 26px; font-weight: 400; margin-bottom: 40px; letter-spacing: .12em; }
+.page-title .page-en { display: block; margin-top: 4px; font-family: var(--sans); font-size: 13px; font-weight: 300; letter-spacing: .14em; color: var(--mute); }
 
 /* Category filter: 中文 + English */
 .filter { display: flex; flex-wrap: wrap; gap: .7em 1em; margin: 0 -14px 56px; font-size: 14px; }
