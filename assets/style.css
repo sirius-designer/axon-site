@@ -158,7 +158,7 @@ main { padding: 72px 56px 96px; min-height: 70vh; max-width: 1440px; margin: 0 a
 .form-status.is-error { color: #D93025; }
 .req { margin-top: 96px; padding-top: 48px; border-top: 1px solid var(--line); }
 .req-intro { font-size: 15px; margin: 32px 0 32px; }
-.req-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.req-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .req-card { display: flex; flex-direction: column; gap: 6px; padding: 28px; border: 1px solid var(--line); border-radius: 12px; min-height: 170px; }
 .req-card:hover { border-color: var(--ink); }
 .req-title { font-family: var(--serif); font-size: 18px; }
