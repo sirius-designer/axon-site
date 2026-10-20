@@ -164,6 +164,7 @@ main { padding: 72px 56px 96px; min-height: 70vh; max-width: 1440px; margin: 0 a
 .req-title { font-family: var(--serif); font-size: 18px; }
 .req-desc { font-size: 13px; color: var(--mute); }
 .req-go { margin-top: auto; align-self: flex-start; background: var(--lime); font-size: 13px; padding: 6px 18px; border-radius: 999px; }
+.req-card:not(.is-soon):hover .req-go { background: var(--ink); color: var(--lime); }
 .req-card.is-soon { cursor: default; }
 .req-card.is-soon:hover { border-color: var(--line); }
 .req-card.is-soon .req-go { background: #F1F2F2; color: var(--mute); }
