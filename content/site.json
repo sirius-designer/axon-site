@@ -9,7 +9,7 @@
   "email": "Sirius.chen@axon-tw.com",
   "phone": "04-2327 6999",
   "address": "40352 台中市西區大業北路7號7樓",
-  "line": "https://line.me/ti/p/~0952827555",
+  "line": "https://line.me/ti/p/rEwqgQRfjD",
   "instagram": "",
   "facebook": "",
   "services": [
@@ -74,5 +74,25 @@
   ],
   "company": "台灣亞上有限公司",
   "logo": "images/brand/logo-white.svg",
-  "taxId": "25184510"
+  "taxId": "25184510",
+  "lineQr": "images/brand/line-qr.svg",
+  "contactIntro": "有設計需求，歡迎填寫下方表單、來信或加入 LINE 聊聊。\n\n我們會在 1–2 個工作天內回覆您。",
+  "web3formsKey": "e9527feb-6b63-4470-9abd-c87e102f2b3c",
+  "forms": [
+    {
+      "title": "ESG 永續報告書設計需求表",
+      "desc": "報告書規格、頁數、章節樣式與時程",
+      "url": ""
+    },
+    {
+      "title": "品牌設計需求表",
+      "desc": "LOGO、識別系統與品牌應用項目",
+      "url": ""
+    },
+    {
+      "title": "包裝設計需求表",
+      "desc": "品項、結構、材質與印刷需求",
+      "url": ""
+    }
+  ]
 }

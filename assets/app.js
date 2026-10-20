@@ -180,12 +180,73 @@ function contact(site) {
     ["電話", site.phone && esc(site.phone)],
     ["地址", site.address && esc(site.address)],
     ["統一編號", site.taxId && esc(site.taxId)],
-    ["LINE", site.line && `<a href="${esc(site.line)}" target="_blank" rel="noopener">加入好友詢問</a>`],
   ].filter(r => r[1]);
+  const field = (name, label, ph, req, type = "text") => `
+      <label class="f-row"><span class="f-label">${label}${req ? '<i aria-hidden="true">*</i>' : ""}</span>
+        <input name="${name}" type="${type}" placeholder="${ph}"${req ? " required" : ""}></label>`;
   main().innerHTML = `
     <h1 class="page-title">聯絡</h1>
-    <p class="prose" style="margin-bottom:40px">有設計需求，歡迎來信或用 LINE 聊聊，請簡單說明品牌、需求項目與預計時程。</p>
-    <div class="list">${rows.map(([k, v]) => `<div><h2>${k}</h2><p>${v}</p></div>`).join("")}</div>`;
+    <div class="contact-grid">
+      <section class="contact-info">
+        <div class="contact-intro">${paras(site.contactIntro || "")}</div>
+        <dl class="info-list">${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
+        ${site.line ? `<div class="line-box">
+          ${site.lineQr ? `<img src="${esc(site.lineQr)}" alt="LINE QR code">` : ""}
+          <div><p class="line-title">LINE 帳號</p><p class="line-note">手機掃描 QR code，或直接點按加入</p>
+          <a class="pill" href="${esc(site.line)}" target="_blank" rel="noopener">加入好友</a></div></div>` : ""}
+      </section>
+      <form class="contact-form" novalidate>
+        ${field("公司名稱", "公司名稱", "例如：台灣亞上有限公司", false)}
+        ${field("name", "聯絡人名稱", "您的姓名", true)}
+        ${field("email", "電子郵件", "name@company.com", true, "email")}
+        ${field("電話號碼", "電話號碼", "0912-345-678", true, "tel")}
+        <label class="f-row f-top"><span class="f-label">留言</span>
+          <textarea name="留言" rows="7" placeholder="留下您想詢問的問題，例如需求項目、預計時程、預算範圍"></textarea></label>
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="f-row"><span></span><button class="submit" type="submit">送出</button></div>
+        <div class="f-row"><span></span><p class="form-status" role="status" aria-live="polite"></p></div>
+      </form>
+    </div>
+    ${(site.forms || []).length ? `<section class="req">
+      <h2 class="b-heading">設計需求表</h2>
+      <p class="req-intro">已經有明確的設計需求？填寫對應的需求表，我們能更快掌握規格並提供報價。</p>
+      <div class="req-grid">${site.forms.map(f => `
+        <a class="req-card${f.url ? "" : " is-soon"}" ${f.url ? `href="${esc(f.url)}" target="_blank" rel="noopener"` : 'aria-disabled="true"'}>
+          <span class="req-title">${esc(f.title)}</span>
+          <span class="req-desc">${esc(f.desc || "")}</span>
+          <span class="req-go">${f.url ? "填寫需求表 →" : "準備中"}</span>
+        </a>`).join("")}</div>
+    </section>` : ""}`;
+
+  // 表單送出：透過 Web3Forms 寄到網站資訊裡設定的信箱
+  const form = main().querySelector(".contact-form");
+  const status = form.querySelector(".form-status");
+  const btn = form.querySelector(".submit");
+  const say = (msg, kind) => { status.textContent = msg; status.className = "form-status " + (kind || ""); };
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const bad = [...form.querySelectorAll("[required]")].find(i => !i.value.trim() || !i.checkValidity());
+    if (bad) { say(bad.type === "email" && bad.value ? "請確認電子郵件格式是否正確。" : "請填寫標示 * 的必填欄位。", "is-error"); bad.focus(); return; }
+    if (!site.web3formsKey) { say("表單尚未設定收信金鑰，請改用 Email 或 LINE 與我們聯繫。", "is-error"); return; }
+    const data = Object.fromEntries(new FormData(form));
+    if (data.botcheck) return;
+    delete data.botcheck;
+    data.access_key = site.web3formsKey;
+    data.subject = `AXON 官網聯絡表單｜${data["公司名稱"] || data.name}`;
+    data.from_name = "AXON 官網";
+    btn.disabled = true; btn.textContent = "送出中…"; say("");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) });
+      const out = await res.json();
+      if (!out.success) throw new Error(out.message);
+      form.reset();
+      say("已收到您的訊息，我們會在 1–2 個工作天內與您聯繫，謝謝！", "is-ok");
+    } catch (err) {
+      say(`送出失敗，請稍後再試，或直接來信 ${site.email || ""}。`, "is-error");
+    } finally {
+      btn.disabled = false; btn.textContent = "送出";
+    }
+  });
 }
 
 load().catch(() => {

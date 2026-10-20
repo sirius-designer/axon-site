@@ -98,6 +98,20 @@ content:
       - { name: address, label: 地址, type: string }
       - { name: taxId, label: 統一編號, type: string }
       - { name: line, label: LINE 連結, type: string }
+      - { name: lineQr, label: LINE QR code 圖片（建議 SVG）, type: image }
+      - { name: contactIntro, label: 聯絡頁說明文字（空一行＝分段）, type: text }
+      - { name: web3formsKey, label: 表單收信金鑰（Web3Forms Access Key，請勿任意更改）, type: string }
+      - name: forms
+        label: 設計需求表按鈕（網址留空＝顯示「準備中」）
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - { name: title, label: 按鈕標題, type: string }
+          - { name: desc, label: 簡短說明, type: string }
+          - { name: url, label: 表單網址, type: string }
       - { name: instagram, label: Instagram 連結, type: string }
       - { name: facebook, label: Facebook 連結, type: string }
       - name: categories
