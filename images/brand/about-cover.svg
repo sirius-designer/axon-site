@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1200" width="2400" height="1200">
+<defs><filter id="b" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="38"/></filter>
+<radialGradient id="l" cx="55%" cy="45%" r="60%"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".85"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient></defs>
+<rect width="2400" height="1200" fill="#E9EAEA"/>
+<g filter="url(#b)" opacity=".75"><rect x="0" y="0" width="140" height="1300" fill="#B7BABB"/><rect x="170" y="0" width="60" height="1300" fill="#C9CBCC"/><rect x="276" y="0" width="60" height="1300" fill="#DADCDC"/><rect x="382" y="0" width="60" height="1300" fill="#B7BABB"/><rect x="460" y="0" width="60" height="1300" fill="#A9ACAD"/><rect x="550" y="0" width="60" height="1300" fill="#B7BABB"/><rect x="628" y="0" width="320" height="1300" fill="#A9ACAD"/><rect x="966" y="0" width="320" height="1300" fill="#C9CBCC"/><rect x="1304" y="0" width="320" height="1300" fill="#C9CBCC"/><rect x="1670" y="0" width="320" height="1300" fill="#A9ACAD"/><rect x="2008" y="0" width="90" height="1300" fill="#C9CBCC"/><rect x="2144" y="0" width="90" height="1300" fill="#DADCDC"/><rect x="2264" y="0" width="90" height="1300" fill="#C9CBCC"/><rect x="0" y="560" width="2400" height="70" fill="#8E9192"/><rect x="0" y="80" width="2400" height="60" fill="#9FA2A3"/></g>
+<rect width="2400" height="1200" fill="url(#l)"/>
+<g filter="url(#b)"><circle cx="1720" cy="420" r="90" fill="#CEDF00" opacity=".18"/></g>
+</svg>

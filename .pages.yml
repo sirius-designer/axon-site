@@ -92,7 +92,36 @@ content:
       - { name: logo, label: LOGO（白色、去背，建議 SVG）, type: image }
       - { name: tagline, label: 首頁中文標語, type: string }
       - { name: subline, label: 首頁標語下方說明, type: text }
-      - { name: intro, label: 關於我們, type: text }
+      - { name: intro, label: 關於我們（舊版，已由下方「關於頁」取代）, type: text }
+      - name: about
+        label: 關於頁
+        type: object
+        fields:
+          - { name: cover, label: 封面形象照片（建議橫式 2400×1200、JPG、600KB 以內）, type: image }
+          - name: coverText
+            label: 封面文字顏色
+            type: select
+            options:
+              values: [深色, 白色]
+          - { name: eyebrow, label: 封面英文標語, type: string }
+          - { name: title, label: 封面中文標題, type: string }
+          - { name: lead, label: 引言, type: text }
+          - { name: body, label: 公司介紹（空一行＝分段）, type: text }
+          - { name: valuesHeading, label: 核心價值區塊標題, type: string }
+          - { name: valuesEn, label: 核心價值英文標題, type: string }
+          - { name: valuesTitle, label: 核心價值主標語, type: string }
+          - { name: valuesIntro, label: 核心價值說明, type: text }
+          - name: values
+            label: 三個價值
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - { name: icon, label: 圖示（SVG）, type: image }
+              - { name: title, label: 標題, type: string }
+              - { name: text, label: 說明, type: text }
       - { name: email, label: Email, type: string }
       - { name: phone, label: 電話, type: string }
       - { name: address, label: 地址, type: string }

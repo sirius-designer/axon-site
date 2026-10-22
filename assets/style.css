@@ -126,6 +126,27 @@ main { padding: 72px 56px 96px; min-height: 70vh; max-width: 1440px; margin: 0 a
 .b-split-text p + p { margin-top: 1.1em; }
 .b-rule { border: 0; border-top: 1px solid var(--line); margin: 8px 0; }
 
+/* 關於頁 */
+body { overflow-x: clip; }
+.about-cover { margin: -72px calc(50% - 50vw) 96px; min-height: 460px; height: min(78vh, 760px); display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px; background: #E6E7E7 center / cover no-repeat; color: var(--ink); }
+.about-cover.is-light { color: #fff; }
+.about-cover.is-light .about-eyebrow { color: #fff; }
+.about-eyebrow { font-size: 15px; letter-spacing: .24em; color: var(--ink); }
+.about-eyebrow::before { content: ""; display: inline-block; width: 36px; height: 12px; border-radius: 999px; background: var(--lime); margin-right: 14px; vertical-align: 0; }
+.about-title { margin-top: 18px; font-family: var(--serif); font-weight: 400; font-size: 52px; line-height: 1.3; letter-spacing: .32em; text-indent: .32em; }
+.about-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); column-gap: 56px; align-items: start; }
+.about-hero .page-en::before, .values .page-en::before { content: ""; display: inline-block; width: 28px; height: 10px; border-radius: 999px; background: var(--lime); margin-right: 12px; vertical-align: 0; }
+.about-lead { font-family: var(--serif); font-size: 20px; line-height: 1.9; letter-spacing: .04em; }
+.about-body { font-size: 15px; line-height: 2.1; text-align: justify; text-justify: inter-character; }
+.about-body p + p { margin-top: 1.4em; }
+.values { margin-top: 120px; padding-top: 56px; border-top: 1px solid var(--line); }
+.values-title { font-family: var(--serif); font-size: 28px; line-height: 1.6; letter-spacing: .08em; }
+.values-intro { margin-top: 20px; max-width: calc((100% - 24px) / 2); font-size: 15px; line-height: 2; text-align: justify; text-justify: inter-character; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 112px; margin-top: 72px; }
+.value-icon { width: 112px; height: 112px; }
+.value-title { margin-top: 32px; font-family: var(--serif); font-weight: 400; font-size: 21px; letter-spacing: .1em; }
+.value-text { margin-top: 14px; font-size: 15px; line-height: 2; text-align: justify; text-justify: inter-character; }
+
 /* 聯絡頁 */
 .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); column-gap: 56px; align-items: start; }
 .contact-intro { font-size: 15px; margin-bottom: 32px; }
@@ -207,6 +228,17 @@ footer a:hover { color: var(--ink); }
   .work-head { grid-template-columns: 1fr; grid-template-areas: "title" "meta" "desc"; row-gap: 24px; }
   .list > div { grid-template-columns: 1fr; gap: 6px; }
   .contact-grid { grid-template-columns: 1fr; row-gap: 48px; }
+  .about-cover { margin: -40px calc(50% - 50vw) 56px; min-height: 360px; height: 62vh; }
+  .about-eyebrow { font-size: 12px; letter-spacing: .16em; }
+  .about-eyebrow::before { width: 26px; height: 9px; margin-right: 10px; }
+  .about-title { font-size: 30px; letter-spacing: .2em; text-indent: .2em; }
+  .about-hero { grid-template-columns: 1fr; row-gap: 32px; }
+  .about-lead { font-size: 18px; }
+  .values { margin-top: 80px; }
+  .values-title { font-size: 22px; }
+  .values-intro { max-width: none; }
+  .values-grid { grid-template-columns: 1fr; gap: 56px; margin-top: 48px; }
+  .value-icon { width: 88px; height: 88px; }
   .f-row { grid-template-columns: 1fr; gap: 6px; }
   .f-row > span:empty { display: none; }
   .f-top .f-label { padding-top: 0; }

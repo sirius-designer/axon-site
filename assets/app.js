@@ -171,7 +171,34 @@ function services(site) {
 }
 
 function about(site) {
-  main().innerHTML = `<h1 class="page-title">關於<span class="page-en" lang="en">About</span></h1><div class="prose">${nl2p(site.intro)}</div>`;
+  const A = site.about;
+  if (!A) { main().innerHTML = `<h1 class="page-title">關於<span class="page-en" lang="en">About</span></h1><div class="prose">${nl2p(site.intro)}</div>`; return; }
+  const light = A.coverText === "白色";
+  main().innerHTML = `
+    <section class="about-cover${light ? " is-light" : ""}"${A.cover ? ` style="background-image:url('${esc(A.cover)}')"` : ""}>
+      <div class="about-cover-text">
+        ${A.eyebrow ? `<p class="about-eyebrow" lang="en">${esc(A.eyebrow)}</p>` : ""}
+        <h1 class="about-title">${esc(A.title || "關於")}</h1>
+      </div>
+    </section>
+    <section class="about-hero">
+      <div class="about-head">
+        <h2 class="page-title">關於<span class="page-en" lang="en">About</span></h2>
+        ${A.lead ? `<p class="about-lead">${inline(A.lead)}</p>` : ""}
+      </div>
+      <div class="about-body">${paras(A.body || "")}</div>
+    </section>
+    ${(A.values || []).length ? `<section class="values">
+      <h2 class="page-title">${esc(A.valuesHeading || "核心價值")}${A.valuesEn ? `<span class="page-en" lang="en">${esc(A.valuesEn)}</span>` : ""}</h2>
+      ${A.valuesTitle ? `<p class="values-title">${esc(A.valuesTitle)}</p>` : ""}
+      ${A.valuesIntro ? `<div class="values-intro">${paras(A.valuesIntro)}</div>` : ""}
+      <div class="values-grid">${A.values.map(v => `
+        <article class="value">
+          ${v.icon ? `<img class="value-icon" src="${esc(v.icon)}" alt="">` : ""}
+          <h3 class="value-title">${esc(v.title || "")}</h3>
+          <div class="value-text">${paras(v.text || "")}</div>
+        </article>`).join("")}</div>
+    </section>` : ""}`;
 }
 
 function contact(site) {
