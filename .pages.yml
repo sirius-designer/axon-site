@@ -84,17 +84,41 @@ content:
     path: content/site.json
     format: json
     fields:
-      - { name: name, label: 工作室名稱, type: string }
-      - { name: taglineEn, label: 英文標語, type: string }
-      - { name: descriptor, label: 公司說明（例如 Creative Design Firm）, type: string }
-      - { name: seoTitle, label: 網站標題（顯示在瀏覽器分頁與 Google 搜尋結果）, type: string }
-      - { name: company, label: 公司全名, type: string }
-      - { name: logo, label: LOGO（白色、去背，建議 SVG）, type: image }
-      - { name: tagline, label: 首頁中文標語, type: string }
-      - { name: subline, label: 首頁標語下方說明, type: text }
-      - { name: intro, label: 關於我們（舊版，已由下方「關於頁」取代）, type: text }
+      - { name: name, label: 【基本】工作室名稱, type: string }
+      - { name: company, label: 【基本】公司全名, type: string }
+      - { name: logo, label: 【基本】LOGO（白色、去背，建議 SVG）, type: image }
+      - { name: seoTitle, label: 【基本】網站標題（顯示在瀏覽器分頁與 Google 搜尋結果）, type: string }
+      - { name: tagline, label: 【首頁】中文標語, type: string }
+      - { name: taglineEn, label: 【首頁】英文標語, type: string }
+      - { name: subline, label: 【首頁】標語下方說明, type: text }
+      - name: categories
+        label: 【作品】作品分類（中英文名稱與排列順序）
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name} {en}"
+        fields:
+          - { name: name, label: 中文名稱（需與作品的類別選項一致）, type: string }
+          - { name: en, label: 英文名稱, type: string }
+      - { name: servicesIntro, label: 【服務】介紹文字（按 Enter 可自行斷行）, type: text }
+      - name: services
+        label: 【服務】服務項目（依序排列）
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - { name: icon, label: 圖示（SVG）, type: image }
+          - { name: title, label: 服務名稱, type: string }
+          - { name: en, label: 英文名稱, type: string }
+          - { name: body, label: 說明, type: text }
+          - { name: items, label: 服務細項（一項一行，按 Add an item 新增）, type: string, list: true }
+          - { name: linkLabel, label: 按鈕文字（例如：填寫需求表；留空＝不顯示按鈕）, type: string }
+          - { name: link, label: 按鈕連結（需求表網址，或填 contact 連到聯絡頁）, type: string }
       - name: about
-        label: 關於頁
+        label: 【關於】關於頁
         type: object
         fields:
           - { name: cover, label: 封面形象照片（建議橫式 2400×1200、JPG、600KB 以內）, type: image }
@@ -122,16 +146,15 @@ content:
               - { name: icon, label: 圖示（SVG）, type: image }
               - { name: title, label: 標題, type: string }
               - { name: text, label: 說明, type: text }
-      - { name: email, label: Email, type: string }
-      - { name: phone, label: 電話, type: string }
-      - { name: address, label: 地址, type: string }
-      - { name: taxId, label: 統一編號, type: string }
-      - { name: line, label: LINE 連結, type: string }
-      - { name: lineQr, label: LINE QR code 圖片（建議 SVG）, type: image }
-      - { name: contactIntro, label: 聯絡頁說明文字（空一行＝分段）, type: text }
-      - { name: web3formsKey, label: 表單收信金鑰（Web3Forms Access Key，請勿任意更改）, type: string }
+      - { name: contactIntro, label: 【聯絡】說明文字（空一行＝分段）, type: text }
+      - { name: email, label: 【聯絡】Email, type: string }
+      - { name: phone, label: 【聯絡】電話, type: string }
+      - { name: address, label: 【聯絡】地址, type: string }
+      - { name: taxId, label: 【聯絡】統一編號, type: string }
+      - { name: line, label: 【聯絡】LINE 連結, type: string }
+      - { name: lineQr, label: 【聯絡】LINE QR code 圖片（建議 SVG）, type: image }
       - name: forms
-        label: 設計需求表按鈕（網址留空＝顯示「準備中」）
+        label: 【聯絡】設計需求表按鈕（網址留空＝顯示「準備中」）
         type: object
         list:
           collapsible:
@@ -141,31 +164,6 @@ content:
           - { name: title, label: 按鈕標題, type: string }
           - { name: desc, label: 簡短說明, type: string }
           - { name: url, label: 表單網址, type: string }
-      - { name: instagram, label: Instagram 連結, type: string }
-      - { name: facebook, label: Facebook 連結, type: string }
-      - name: categories
-        label: 作品分類（中英文名稱與排列順序）
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{name} {en}"
-        fields:
-          - { name: name, label: 中文名稱（需與作品的類別選項一致）, type: string }
-          - { name: en, label: 英文名稱, type: string }
-      - { name: servicesIntro, label: 服務頁介紹文字（按 Enter 可自行斷行）, type: text }
-      - name: services
-        label: 服務項目（依序排列）
-        type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{title}"
-        fields:
-          - { name: icon, label: 圖示（SVG）, type: image }
-          - { name: title, label: 服務名稱, type: string }
-          - { name: en, label: 英文名稱, type: string }
-          - { name: body, label: 說明, type: text }
-          - { name: items, label: 服務細項（一項一行，按 Add an item 新增）, type: string, list: true }
-          - { name: linkLabel, label: 按鈕文字（例如：填寫需求表；留空＝不顯示按鈕）, type: string }
-          - { name: link, label: 按鈕連結（需求表網址，或填 contact 連到聯絡頁）, type: string }
+      - { name: web3formsKey, label: 【聯絡】表單收信金鑰（Web3Forms Access Key，請勿任意更改）, type: string }
+      - { name: instagram, label: 【社群】Instagram 連結（填了才會出現在頁尾）, type: string }
+      - { name: facebook, label: 【社群】Facebook 連結（填了才會出現在頁尾）, type: string }
