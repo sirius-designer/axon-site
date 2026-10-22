@@ -127,6 +127,7 @@ main { padding: 72px 56px 96px; min-height: 70vh; max-width: 1440px; margin: 0 a
 .b-rule { border: 0; border-top: 1px solid var(--line); margin: 8px 0; }
 
 /* 關於頁 */
+html { overflow-x: hidden; }
 body { overflow-x: clip; }
 .about-cover { margin: -72px calc(50% - 50vw) 96px; min-height: 460px; height: min(78vh, 760px); display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 20px; background: #E6E7E7 center / cover no-repeat; color: var(--ink); }
 .about-cover.is-light { color: #fff; }
