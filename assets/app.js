@@ -165,9 +165,24 @@ function work(site, works) {
 }
 
 function services(site) {
+  const list = site.services || [];
+  const items = s => (s.items || []).length ? `<ul class="svc-items">${s.items.map(i => `<li>${esc(i)}</li>`).join("")}</ul>` : "";
+  const cta = s => s.link ? `<a class="pill svc-cta" href="${esc(s.link)}"${/^https?:/.test(s.link) ? ' target="_blank" rel="noopener"' : ""}>${esc(s.linkLabel || "了解更多")} →</a>` : "";
   main().innerHTML = `
     <h1 class="page-title">服務<span class="page-en" lang="en">Services</span></h1>
-    <div class="list">${(site.services || []).map(s => `<div><h2>${esc(s.title)}</h2><p>${esc(s.body)}</p></div>`).join("")}</div>`;
+    ${site.servicesIntro ? `<p class="svc-intro">${inline(site.servicesIntro)}</p>` : ""}
+    <section class="svc-list">${list.map(s => `
+      <article class="svc-row">
+        <div class="svc-head">
+          ${s.icon ? `<img class="svc-icon" src="${esc(s.icon)}" alt="">` : ""}
+          <h2 class="page-title svc-title">${esc(s.title)}${s.en ? `<span class="page-en" lang="en">${esc(s.en)}</span>` : ""}</h2>
+        </div>
+        <div class="svc-main">
+          <p class="svc-desc">${inline(s.body || "")}</p>
+          ${items(s)}
+          ${cta(s)}
+        </div>
+      </article>`).join("")}</section>`;
 }
 
 function about(site) {

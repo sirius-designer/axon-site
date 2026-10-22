@@ -153,13 +153,19 @@ content:
         fields:
           - { name: name, label: 中文名稱（需與作品的類別選項一致）, type: string }
           - { name: en, label: 英文名稱, type: string }
+      - { name: servicesIntro, label: 服務頁介紹文字（按 Enter 可自行斷行）, type: text }
       - name: services
-        label: 服務項目
+        label: 服務項目（依序排列）
         type: object
         list:
           collapsible:
             collapsed: true
             summary: "{title}"
         fields:
-          - { name: title, label: 項目名稱, type: string }
+          - { name: icon, label: 圖示（SVG）, type: image }
+          - { name: title, label: 服務名稱, type: string }
+          - { name: en, label: 英文名稱, type: string }
           - { name: body, label: 說明, type: text }
+          - { name: items, label: 服務細項（一項一行，按 Add an item 新增）, type: string, list: true }
+          - { name: linkLabel, label: 按鈕文字（例如：填寫需求表；留空＝不顯示按鈕）, type: string }
+          - { name: link, label: 按鈕連結（需求表網址，或填 contact 連到聯絡頁）, type: string }
