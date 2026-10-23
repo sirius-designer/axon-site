@@ -44,12 +44,12 @@
       "en": "Motion Graphics"
     }
   ],
-  "servicesIntro": "每一個設計需求背後，都有想傳達的訊息，也有期待被看見的價值。\n\n我們從理解你的想法開始，找到適合的表達方式。從 ESG／CSR 永續報告書、Amazon 電商視覺到建案行銷，透過品牌識別、平面、網頁與出版設計，讓複雜的資訊容易讀懂，讓品牌的特色自然展現，在不同的接觸中，留下清晰而一致的印象。",
+  "servicesIntro": "每一個設計需求背後，都有想傳達的訊息，也有期待被看見的價值。\n\n我們從理解你的想法開始，找到適合的表達方式。從 ESG企業永續報告書、CSR 企業報告書設計、Amazon 電商視覺到建案行銷，透過品牌識別、平面、網頁與出版設計，讓複雜的資訊容易讀懂，讓品牌企業的特色自然展現，在不同的接觸中，留下清晰而一致的印象。",
   "services": [
     {
       "icon": "images/brand/svc-1.svg",
-      "title": "ESG  CSR 企業報告書設計",
-      "en": "Sustainability Report Design",
+      "title": "CSR 企業報告書設計",
+      "en": "Corporate Social Responsibility Report Design",
       "body": "提供 ESG 永續報告書與 CSR 企業社會責任報告書設計，從整體視覺規劃、封面設計到內頁編排與資訊圖解，將企業永續成果與複雜數據轉化為清晰易讀的內容，兼顧資訊呈現的完整性與閱讀體驗。",
       "items": [
         "報告書整體視覺規劃",
@@ -74,7 +74,8 @@
         "A+ Content 圖文設計",
         "Brand Story 品牌故事設計",
         "Brand Store 品牌旗艦店視覺",
-        "系列商品與多語系版面延伸"
+        "系列商品與多語系版面延伸",
+        "商品介紹影片拍攝剪接製作"
       ],
       "linkLabel": "填寫需求表",
       "link": "https://forms.gle/HBZ1WjhNU8Wo7hxG6"
