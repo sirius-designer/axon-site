@@ -32,8 +32,10 @@
           "text": "把三百頁的揭露，變成讀得下去的報告",
           "width": "全幅",
           "images": [
-            "images/uploads/億光ESG-章節跨頁內頁mockup.jpg"
-          ]
+            "images/uploads/億光ESG-章節跨頁內頁mockup-1.jpg"
+          ],
+          "columns": "1",
+          "ratio": "原比例"
         },
         {
           "type": "文字",
