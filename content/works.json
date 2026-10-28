@@ -118,8 +118,15 @@
       "featured": true,
       "cover": "images/uploads/工作區域 5-100-1.jpg",
       "description": "每季一冊的選書型錄，以留白與單色印刷呈現書本本身。",
-      "images": [
-        "images/uploads/detail2.svg"
+      "blocks": [
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/工作區域 1-100-2.jpg"
+          ],
+          "columns": "1"
+        }
       ]
     },
     {
