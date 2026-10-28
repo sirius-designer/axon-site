@@ -65,7 +65,7 @@
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/工作區域 1-100.jpg"
+            "images/uploads/工作區域 1-100-1.jpg"
           ],
           "columns": "1",
           "ratio": "橫式 3:2"
@@ -73,6 +73,9 @@
         {
           "type": "images",
           "kindName": "圖片",
+          "images": [
+            "images/uploads/工作區域 4-100-3.jpg"
+          ],
           "columns": "1",
           "ratio": "橫式 3:2"
         }
