@@ -25,27 +25,32 @@
             "images/uploads/29772672_psd_07.png"
           ],
           "columns": "1",
-          "ratio": "原比例"
+          "ratio": "原比例",
+          "kindName": "圖片"
         },
         {
           "type": "heading",
           "text": "把三百頁的揭露，變成讀得下去的報告",
-          "width": "全幅"
+          "width": "全幅",
+          "kindName": "標題"
         },
         {
           "type": "text",
           "text": "透過資訊圖表、流程圖與數據視覺化，將繁複的**文字轉化為清楚易懂的圖像**，讓企業的永續行動與成果更容易被理解。\n從版面編排、閱讀層次到圖表風格，**建立一致的視覺語言**，讓讀者快速找到重點，也讓每一頁都更有條理、更容易閱讀。",
-          "width": "全幅"
+          "width": "全幅",
+          "kindName": "文字"
         },
         {
           "type": "images",
           "images": [
             "images/uploads/億光ESG-章節跨頁內頁mockup-2.jpg"
           ],
-          "columns": "1"
+          "columns": "1",
+          "kindName": "圖片"
         },
         {
-          "type": "rule"
+          "type": "rule",
+          "kindName": "分隔線"
         },
         {
           "type": "split",
@@ -53,7 +58,8 @@
             "images/uploads/trail.svg"
           ],
           "text": "**資訊圖表系統**\n\n碳排、用水、員工結構等十二類數據，建立共用的色彩與圖示規則，跨年度更新時只需替換數字。",
-          "imageSide": "左"
+          "imageSide": "左",
+          "kindName": "圖文並排"
         },
         {
           "type": "images",
@@ -64,7 +70,8 @@
           ],
           "columns": "3",
           "ratio": "橫式 3:2",
-          "caption": "左起：章節扉頁、數據圖表、利害關係人議合流程"
+          "caption": "左起：章節扉頁、數據圖表、利害關係人議合流程",
+          "kindName": "圖片"
         }
       ],
       "images": [

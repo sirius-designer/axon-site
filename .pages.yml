@@ -46,26 +46,30 @@ content:
             list:
               collapsible:
                 collapsed: true
-                summary: "▸ 區塊 {index}"
+                summary: "{index}．{kindName}"
             blocks:
               - name: heading
                 label: 標題
                 fields:
+                  - { name: kindName, type: string, hidden: true, default: 標題 }
                   - { name: text, label: 標題文字, type: text }
                   - { name: width, label: 文字幅寬（不選＝二分之一）, type: select, options: { values: [全幅, 二分之一, 三分之一] } }
               - name: text
                 label: 文字
                 fields:
+                  - { name: kindName, type: string, hidden: true, default: 文字 }
                   - { name: text, label: 文字（用 **文字** 可加粗並加上螢光筆）, type: text }
                   - { name: width, label: 文字幅寬（不選＝二分之一）, type: select, options: { values: [全幅, 二分之一, 三分之一] } }
               - name: credits
                 label: 製作名單
                 fields:
+                  - { name: kindName, type: string, hidden: true, default: 製作名單 }
                   - { name: text, label: 製作名單（每行寫「職稱｜名字」）, type: text }
                   - { name: width, label: 文字幅寬（不選＝二分之一）, type: select, options: { values: [全幅, 二分之一, 三分之一] } }
               - name: images
                 label: 圖片
                 fields:
+                  - { name: kindName, type: string, hidden: true, default: 圖片 }
                   - { name: images, label: 圖片, type: image, list: true }
                   - { name: columns, label: 欄數, type: select, options: { values: ["1", "2", "3"] } }
                   - { name: ratio, label: 比例（固定比例會自動裁切置中）, type: select, options: { values: [原比例, 正方形 1:1, 橫式 3:2, 直式 4:5] } }
@@ -73,12 +77,14 @@ content:
               - name: split
                 label: 圖文並排
                 fields:
+                  - { name: kindName, type: string, hidden: true, default: 圖文並排 }
                   - { name: images, label: 圖片（只會顯示第一張）, type: image, list: true }
                   - { name: text, label: 文字（用 **文字** 可加粗並加上螢光筆）, type: text }
                   - { name: imageSide, label: 圖片位置, type: select, options: { values: [左, 右] } }
               - name: rule
                 label: 分隔線
-                fields: []
+                fields:
+                  - { name: kindName, type: string, hidden: true, default: 分隔線 }
           - { name: images, label: 舊版內頁圖片（沒有使用內頁版面時才顯示）, type: image, list: true }
 
   - name: site
