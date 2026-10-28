@@ -41,41 +41,44 @@ content:
           - { name: description, label: 專案簡介（顯示在標題旁，可留空）, type: text }
           - name: blocks
             label: 內頁版面（依序堆疊；有加區塊時，下方「舊版內頁圖片」不會顯示）
-            type: object
+            type: block
+            blockKey: type
             list:
               collapsible:
                 collapsed: true
-                summary: "▸ 區塊 {index}｜{type}"
-            fields:
-              - name: type
-                label: 區塊類型
-                type: select
-                required: true
-                options:
-                  values: [標題, 文字, 製作名單, 圖片, 圖文並排, 分隔線]
-              - { name: text, label: 文字（標題／文字／製作名單／圖文並排用；製作名單每行寫「職稱｜名字」；**粗體**）, type: text }
-              - name: width
-                label: 文字幅寬（標題／文字／製作名單用；不選＝二分之一）
-                type: select
-                options:
-                  values: [全幅, 二分之一, 三分之一]
-              - { name: images, label: 圖片（圖片／圖文並排用）, type: image, list: true }
-              - name: columns
-                label: 圖片欄數（圖片區塊用）
-                type: select
-                options:
-                  values: ["1", "2", "3"]
-              - name: ratio
-                label: 圖片比例（圖片區塊用；固定比例會自動裁切置中）
-                type: select
-                options:
-                  values: [原比例, 正方形 1:1, 橫式 3:2, 直式 4:5]
-              - { name: caption, label: 圖片說明（選填）, type: string }
-              - name: imageSide
-                label: 圖片位置（圖文並排用）
-                type: select
-                options:
-                  values: [左, 右]
+                summary: "▸ 區塊 {index}"
+            blocks:
+              - name: heading
+                label: 標題
+                fields:
+                  - { name: text, label: 標題文字, type: text }
+                  - { name: width, label: 文字幅寬（不選＝二分之一）, type: select, options: { values: [全幅, 二分之一, 三分之一] } }
+              - name: text
+                label: 文字
+                fields:
+                  - { name: text, label: 文字（用 **文字** 可加粗並加上螢光筆）, type: text }
+                  - { name: width, label: 文字幅寬（不選＝二分之一）, type: select, options: { values: [全幅, 二分之一, 三分之一] } }
+              - name: credits
+                label: 製作名單
+                fields:
+                  - { name: text, label: 製作名單（每行寫「職稱｜名字」）, type: text }
+                  - { name: width, label: 文字幅寬（不選＝二分之一）, type: select, options: { values: [全幅, 二分之一, 三分之一] } }
+              - name: images
+                label: 圖片
+                fields:
+                  - { name: images, label: 圖片, type: image, list: true }
+                  - { name: columns, label: 欄數, type: select, options: { values: ["1", "2", "3"] } }
+                  - { name: ratio, label: 比例（固定比例會自動裁切置中）, type: select, options: { values: [原比例, 正方形 1:1, 橫式 3:2, 直式 4:5] } }
+                  - { name: caption, label: 圖片說明（選填）, type: string }
+              - name: split
+                label: 圖文並排
+                fields:
+                  - { name: images, label: 圖片（只會顯示第一張）, type: image, list: true }
+                  - { name: text, label: 文字（用 **文字** 可加粗並加上螢光筆）, type: text }
+                  - { name: imageSide, label: 圖片位置, type: select, options: { values: [左, 右] } }
+              - name: rule
+                label: 分隔線
+                fields: []
           - { name: images, label: 舊版內頁圖片（沒有使用內頁版面時才顯示）, type: image, list: true }
 
   - name: site

@@ -134,9 +134,11 @@ function work(site, works) {
   const w = works[i];
   const prev = works[i - 1], next = works[i + 1];
   document.title = w.title + document.title.slice(document.title.indexOf("｜"));
-  const blocks = (w.blocks || []).filter(b => b && BLOCKS[b.type]);
+  const KIND = { heading: "標題", text: "文字", credits: "製作名單", images: "圖片", split: "圖文並排", rule: "分隔線" };
+  const kindOf = b => KIND[b.type] || b.type;
+  const blocks = (w.blocks || []).filter(b => b && BLOCKS[kindOf(b)]);
   const body = blocks.length
-    ? `<div class="blocks">${blocks.map(b => BLOCKS[b.type](b)).join("")}</div>`
+    ? `<div class="blocks">${blocks.map(b => BLOCKS[kindOf(b)](b)).join("")}</div>`
     : `<div class="work-images">
         <img src="${esc(w.cover)}" alt="${esc(w.title)}">
         ${(w.images || []).map(src => `<img src="${esc(src)}" alt="" loading="lazy">`).join("")}
