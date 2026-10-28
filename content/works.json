@@ -99,11 +99,20 @@
       ]
     },
     {
-      "title": "青田書店〈秋季選書〉型錄",
-      "slug": "qingtian-books",
-      "client": "青田書店",
+      "title": "山豐國小美術班第六屆",
+      "slug": "sfes-6thArt Class",
+      "client": "國立桃園市平鎮區山豐國小藝術才能美術班",
       "categories": [
         "視覺設計"
+      ],
+      "tasks": [
+        "主視覺設計",
+        "封面設計",
+        "內頁編排",
+        "印刷監製"
+      ],
+      "tasksCustom": [
+        "整體專案規劃"
       ],
       "year": "2026",
       "featured": true,
