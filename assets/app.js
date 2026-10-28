@@ -296,3 +296,7 @@ function contact(site) {
 load().catch(() => {
   main().innerHTML = `<p class="notice">內容載入失敗。若是在自己電腦上直接開檔案，請改用本機伺服器預覽（見 README）。</p>`;
 });
+
+// 圖片保護：在圖片上按右鍵或拖曳時不出現下載選項
+document.addEventListener("contextmenu", e => { if (e.target.closest && e.target.closest("img")) e.preventDefault(); });
+document.addEventListener("dragstart", e => { if (e.target.closest && e.target.closest("img")) e.preventDefault(); });
