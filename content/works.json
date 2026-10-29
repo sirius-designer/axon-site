@@ -142,7 +142,7 @@
           ],
           "columns": "1",
           "ratio": "原比例",
-          "caption": "畢業紀念冊封面、封底與目錄跨頁"
+          "caption": "畢業畫冊全彩印刷，方背精裝、封面局部磨砂上光"
         },
         {
           "type": "text",
@@ -159,8 +159,7 @@
             "images/uploads/sfes-6th-05.jpg"
           ],
           "columns": "3",
-          "ratio": "橫式 3:2",
-          "caption": "畫冊立體展示與內頁跨頁"
+          "ratio": "橫式 3:2"
         },
         {
           "type": "images",
@@ -205,7 +204,7 @@
           ],
           "columns": "1",
           "ratio": "原比例",
-          "caption": "派對帽造型邀請卡，一側印上展覽主題，另一側整理展期、地點與 QR code"
+          "caption": "派對帽造型邀請卡，正面印上展覽主題，背面為展期資訊"
         },
         {
           "type": "images",
@@ -215,8 +214,7 @@
             "images/uploads/sfes-6th-11.jpg"
           ],
           "columns": "2",
-          "ratio": "原比例",
-          "caption": "海報與關東旗，整理展期、地點與 QR code"
+          "ratio": "原比例"
         },
         {
           "type": "rule",
@@ -231,7 +229,7 @@
           ],
           "columns": "2",
           "ratio": "正方形 1:1",
-          "caption": "展場實景與學童肖像作品牆；角色立牌與 QR code 展示牌由我們設計"
+          "caption": "展場成果實景"
         },
         {
           "type": "images",
@@ -243,7 +241,7 @@
           ],
           "columns": "3",
           "ratio": "橫式 3:2",
-          "caption": "展場人潮與彩旗佈置、師生大合照、畫冊發放現場"
+          "caption": "展場人潮與彩旗客製印刷佈置、師生大合照、畫冊發放"
         },
         {
           "type": "split",
