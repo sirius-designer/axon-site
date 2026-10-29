@@ -99,7 +99,7 @@
       ]
     },
     {
-      "title": "山豐國小美術班第六屆",
+      "title": "山豐國小 2026 藝起狂歡畢展視覺",
       "slug": "sfes-6th-artclass",
       "client": "國立桃園市平鎮區山豐國小藝術才能美術班",
       "categories": [
@@ -115,17 +115,142 @@
         "整體專案規劃"
       ],
       "year": "2026",
-      "featured": true,
-      "cover": "images/uploads/工作區域 5-100-1.jpg",
-      "description": "每季一冊的選書型錄，以留白與單色印刷呈現書本本身。",
+      "featured": false,
+      "cover": "images/uploads/sfes-6th-cover.jpg",
+      "description": "第六屆藝術才能美術班畢業展，以**「藝起狂歡」**為主題，把畢業展變成一場熱鬧的藝術派對。主視覺以打開的紅色禮物盒為中心，彩帶向外舒展，畫筆、調色盤與孩子們的角色穿插其間；搭配藍、橘、綠與深藍的明亮配色與立體疊影的標準字。我們將這套視覺落實在**畢業紀念冊**，並延伸到海報、邀請卡與展場。",
       "blocks": [
         {
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/工作區域 1-100-2.jpg"
+            "images/uploads/sfes-6th-01.jpg"
           ],
-          "columns": "1"
+          "columns": "1",
+          "ratio": "原比例"
+        },
+        {
+          "type": "heading",
+          "kindName": "標題",
+          "text": "翻開畢業冊，就像走進一場派對"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/sfes-6th-02.jpg"
+          ],
+          "columns": "1",
+          "ratio": "原比例",
+          "caption": "畢業紀念冊封面、封底與目錄跨頁"
+        },
+        {
+          "type": "text",
+          "kindName": "文字",
+          "text": "畢業紀念冊以「藝起狂歡」主視覺為封面，禮物盒與彩帶從封面延伸到封底與書背，以大面積色塊銜接。目錄跨頁以橘色標籤區分章節，**不規則的圓角色塊**承載文字與照片，讓長篇內容保有輕快的閱讀節奏。"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/sfes-6th-03.jpg",
+            "images/uploads/sfes-6th-04.jpg",
+            "images/uploads/sfes-6th-05.jpg"
+          ],
+          "columns": "3",
+          "ratio": "橫式 3:2",
+          "caption": "畫冊立體展示與內頁跨頁"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/sfes-6th-06.jpg",
+            "images/uploads/sfes-6th-07.jpg"
+          ],
+          "columns": "2",
+          "ratio": "正方形 1:1",
+          "caption": "畫冊與帆布袋，袋面延續主視覺的標準字與角色"
+        },
+        {
+          "type": "rule",
+          "kindName": "分隔線"
+        },
+        {
+          "type": "heading",
+          "kindName": "標題",
+          "text": "讓畢業展，成為一場開箱的派對"
+        },
+        {
+          "type": "text",
+          "kindName": "文字",
+          "text": "主視覺以打開的**禮物盒**為起點，彩帶從盒中湧出，畫筆、調色盤與孩子們的角色隨著色塊流動。「藝起狂歡」四字以立體疊影處理，藍白字身搭配橘色與深藍的陰影，在繽紛的背景中依然清楚。"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/sfes-6th-08.jpg"
+          ],
+          "columns": "1",
+          "ratio": "原比例",
+          "caption": "主視覺延伸至展覽背板"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/sfes-6th-09.jpg"
+          ],
+          "columns": "1",
+          "ratio": "原比例",
+          "caption": "派對帽造型邀請卡，一側印上展覽主題，另一側整理展期、地點與 QR code"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/sfes-6th-10.jpg",
+            "images/uploads/sfes-6th-11.jpg"
+          ],
+          "columns": "2",
+          "ratio": "原比例",
+          "caption": "海報與關東旗，整理展期、地點與 QR code"
+        },
+        {
+          "type": "rule",
+          "kindName": "分隔線"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/sfes-6th-12.jpg",
+            "images/uploads/sfes-6th-13.jpg"
+          ],
+          "columns": "2",
+          "ratio": "正方形 1:1",
+          "caption": "展場實景與學童肖像作品牆；角色立牌與 QR code 展示牌由我們設計"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/sfes-6th-14.jpg",
+            "images/uploads/sfes-6th-15.jpg",
+            "images/uploads/sfes-6th-16.jpg"
+          ],
+          "columns": "3",
+          "ratio": "橫式 3:2",
+          "caption": "展場人潮與彩旗佈置、師生大合照、畫冊發放現場"
+        },
+        {
+          "type": "split",
+          "kindName": "圖文並排",
+          "images": [
+            "images/uploads/sfes-6th-17.jpg"
+          ],
+          "text": "**個人照拍攝**\n\n畢業冊裡的個人照，選在校園操場的紅色跑道上拍攝。以開闊的戶外場景取代制式棚拍，讓孩子們以自在的姿態，留下屬於自己的畢業紀念。",
+          "imageSide": "右"
         }
       ]
     },
