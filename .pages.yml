@@ -73,6 +73,7 @@ content:
                   - { name: images, label: 圖片, type: image, list: true }
                   - { name: columns, label: 欄數, type: select, options: { values: ["1", "2", "3"] } }
                   - { name: ratio, label: 比例（固定比例會自動裁切置中）, type: select, options: { values: [原比例, 正方形 1:1, 橫式 3:2, 直式 4:5] } }
+                  - { name: gap, label: 圖片間距（不選＝標準；無間距＝圖片緊貼，適合 A+ 模組連成整頁）, type: select, options: { values: [標準, 無間距] } }
                   - { name: caption, label: 圖片說明（選填）, type: string }
               - name: split
                 label: 圖文並排
