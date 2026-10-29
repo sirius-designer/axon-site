@@ -2,6 +2,13 @@
 <html lang="zh-Hant-TW">
 <head>
 <meta charset="utf-8">
+<script>
+  // 舊網址 /work?w=代稱 自動轉到新網址 /work/代稱
+  (function () {
+    var w = new URLSearchParams(location.search).get("w");
+    if (w && /^[a-z0-9-]+$/.test(w)) location.replace("/work/" + w);
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>作品</title>
 <meta name="description" content="AXON 台灣亞上是台中的設計公司，專注 ESG 永續報告書設計、品牌識別、商業設計、活動企劃與網頁規劃。">
