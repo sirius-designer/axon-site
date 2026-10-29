@@ -48,15 +48,18 @@ function chrome(site) {
     ${site.line ? `<a class="line-btn" href="${esc(site.line)}" target="_blank" rel="noopener">LINE 詢問</a>` : ""}`);
   const brand = site.company ? `${site.name} ${site.company.replace(/有限公司$/, "")}` : site.name;
   if (page === "home") document.title = site.seoTitle || brand;
-  else document.title = `${document.title}｜${brand}`;
+  else if (!document.title.includes("｜")) document.title = `${document.title}｜${brand}`;
 }
+
+// 作品內頁網址：/work/代稱（由 GitHub Actions 自動產生獨立頁面）
+const workUrl = slug => `work/${encodeURIComponent(slug)}`;
 
 // 設計項目：選單勾選＋自行新增的項目；都沒填時改顯示作品類別
 const tasksOf = w => [...(w.tasks || []), ...(w.tasksCustom || [])].map(t => String(t).trim()).filter(Boolean);
 const card = w => {
   const sub = tasksOf(w).length ? tasksOf(w) : catsOf(w);
   return `
-  <a class="card" href="work?w=${encodeURIComponent(w.slug)}">
+  <a class="card" href="${workUrl(w.slug)}">
     <img src="${esc(w.cover)}" alt="${esc(w.title)}" loading="lazy">
     <h3 class="ttl">${esc(w.title)}</h3>
     ${sub.length ? `<p class="tasks">${sub.map(esc).join("、")}</p>` : ""}
@@ -128,7 +131,7 @@ const BLOCKS = {
 };
 
 function work(site, works) {
-  const slug = new URLSearchParams(location.search).get("w");
+  const slug = document.body.dataset.slug || new URLSearchParams(location.search).get("w");
   const i = works.findIndex(w => w.slug === slug);
   if (i < 0) { main().innerHTML = `<p class="notice">找不到這件作品。<a class="more" href="works">回到作品列表</a></p>`; return; }
   const w = works[i];
@@ -160,8 +163,8 @@ function work(site, works) {
       </div>
       ${body}
       <nav class="pager" aria-label="其他作品">
-        <span>${prev ? `<a href="work?w=${encodeURIComponent(prev.slug)}">上一件：${esc(prev.title)}</a>` : ""}</span>
-        <span>${next ? `<a href="work?w=${encodeURIComponent(next.slug)}">下一件：${esc(next.title)}</a>` : ""}</span>
+        <span>${prev ? `<a href="${workUrl(prev.slug)}">上一件：${esc(prev.title)}</a>` : ""}</span>
+        <span>${next ? `<a href="${workUrl(next.slug)}">下一件：${esc(next.title)}</a>` : ""}</span>
       </nav>
     </article>`;
 }
