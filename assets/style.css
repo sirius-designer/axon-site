@@ -75,8 +75,10 @@ main { padding: 72px 56px 96px; min-height: 70vh; max-width: 1440px; margin: 0 a
 .filter button[aria-pressed="true"] { color: var(--ink); background: var(--lime); }
 
 /* Works grid: uneven heights, like a pinned wall */
-.grid { columns: 3 280px; column-gap: 40px; margin-bottom: -56px; }
-.card { break-inside: avoid; padding-bottom: 56px; display: block; }
+.grid { display: flex; align-items: flex-start; column-gap: 40px; margin-bottom: -56px; }
+.grid-col { flex: 1 1 0; min-width: 0; }
+.grid > .notice { flex: 1 1 100%; }
+.card { padding-bottom: 56px; display: block; }
 .card img { width: 100%; background: var(--line); transition: opacity .3s; }
 .card:hover img { opacity: .85; }
 .card:hover .ttl { box-shadow: inset 0 -6px 0 var(--lime); }

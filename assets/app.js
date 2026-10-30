@@ -13,12 +13,49 @@ const NAV = [
   ["contact", "聯絡", "contact", "Contact"],
 ];
 
+// 手動排序：空白（含後台清空後存成的空字串）視為沒填
+const ordOf = (w, key) => {
+  const v = w[key];
+  if (v === undefined || v === null || String(v).trim() === "") return null;
+  const n = Number(v);
+  return Number.isNaN(n) ? null : n;
+};
+const byManual = key => (a, b) => {
+  const x = ordOf(a, key), y = ordOf(b, key);
+  if (x === null && y === null) return 0;
+  if (x === null) return 1;
+  if (y === null) return -1;
+  return x - y;
+};
+
+// 作品牆排版：卡片「逐排」放進各欄（第 1、2、3 件在第一排，第 4、5、6 件在第二排…），欄內由上往下緊密排列
+// 欄數規則與原本相同：每欄至少 280px、最多 3 欄
+const GRID_MIN = 280, GRID_MAX = 3;
+function layoutGrid(grid) {
+  if (!grid) return;
+  grid._cards = [...grid.querySelectorAll(".card")];
+  grid._n = 0;
+  grid._place = () => {
+    if (!grid._cards.length) return;
+    const gap = parseFloat(getComputedStyle(grid).columnGap) || 0;
+    const n = Math.max(1, Math.min(GRID_MAX, Math.floor((grid.clientWidth + gap) / (GRID_MIN + gap))));
+    if (n === grid._n) return;
+    grid._n = n;
+    const cols = Array.from({ length: n }, () => { const d = document.createElement("div"); d.className = "grid-col"; return d; });
+    grid._cards.forEach((c, i) => cols[i % n].appendChild(c));
+    grid.replaceChildren(...cols);
+  };
+  grid._place();
+  if (!grid._ro && "ResizeObserver" in window) { grid._ro = new ResizeObserver(() => grid._place()); grid._ro.observe(grid); }
+}
+
 async function load() {
   const [site, data] = await Promise.all([
     fetch("content/site.json").then(r => r.json()),
     fetch("content/works.json").then(r => r.json()),
   ]);
-  const works = (data.works || []).slice().sort((a, b) => String(b.year).localeCompare(String(a.year)));
+  // 排序：先依年份新到舊；再依後台「排序」欄位（數字越小越前面，有填的排在沒填的前面；同數字或都沒填則維持年份順序）
+  const works = (data.works || []).slice().sort((a, b) => String(b.year).localeCompare(String(a.year))).sort(byManual("order"));
   (site.categories || []).forEach(c => { EN[c.name] = c.en; });
   chrome(site);
   const render = { home, works: worksPage, work, services, about, contact }[page];
@@ -70,7 +107,7 @@ const card = w => {
 const main = () => document.querySelector("main");
 
 function home(site, works) {
-  const featured = works.filter(w => w.featured);
+  const featured = works.filter(w => w.featured).sort(byManual("homeOrder"));
   main().innerHTML = `
     <section class="hero">
       <h1>${esc(site.tagline)}</h1>
@@ -79,6 +116,7 @@ function home(site, works) {
     </section>
     <div class="grid">${(featured.length ? featured : works.slice(0, 6)).map(card).join("")}</div>
     <a class="more" href="works">看全部作品</a>`;
+  layoutGrid(main().querySelector(".grid"));
 }
 
 function worksPage(site, works) {
@@ -98,6 +136,7 @@ function worksPage(site, works) {
       `<button type="button" data-c="${esc(c)}" aria-pressed="${c === current}">${c ? catLabel(c) : `全部 <span class="en">All</span>`}</button>`).join("");
     const list = current ? works.filter(w => catsOf(w).includes(current)) : works;
     grid.innerHTML = list.length ? list.map(card).join("") : `<p class="notice">這個分類還沒有作品。</p>`;
+    layoutGrid(grid);
   };
   filter.addEventListener("click", e => {
     const b = e.target.closest("button"); if (!b) return;
