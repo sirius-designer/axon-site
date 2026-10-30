@@ -35,8 +35,10 @@ content:
               values: [主視覺設計, 封面設計, 插畫繪製, 內頁編排, 資訊圖表設計, 影像修圖, 攝影, LOGO設計, 品牌識別系統, 包裝設計, 印刷監製, 網站設計, 動態影像]
           - { name: tasksCustom, label: 其他設計項目（選單裡沒有的，按 Add an item 自行新增）, type: string, list: true }
           - { name: year, label: 年份, type: string }
+          - { name: order, label: 排序（數字，越小越前面；不填＝依年份自動排；建議用 10、20、30 隔開填）, type: number }
           - { name: award, label: 獲獎／備註（選填，例如 TCSA 2024企業永續獎-白金級）, type: string }
           - { name: featured, label: 顯示在首頁, type: boolean }
+          - { name: homeOrder, label: 首頁排序（只對「顯示在首頁」有效；數字越小越前面；不填＝依作品牆順序）, type: number }
           - { name: cover, label: 封面圖, type: image }
           - { name: description, label: 專案簡介（顯示在標題旁，可留空）, type: text }
           - name: blocks
