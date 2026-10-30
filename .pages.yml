@@ -26,7 +26,7 @@ content:
             type: select
             options:
               multiple: true
-              values: [ESG / 永續報告書設計, 指標系統設計, 品牌重塑, 品牌識別, 視覺設計, 包裝設計, 網站設計, 品牌設計, 動態設計]
+              values: [ESG / 永續報告書設計, 指標系統設計, 品牌重塑, 品牌識別, 視覺設計, 電商視覺設計, 包裝設計, 網站設計, 品牌設計, 動態設計]
           - name: tasks
             label: 設計項目（可複選，顯示在作品牆標題下方）
             type: select
