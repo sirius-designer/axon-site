@@ -92,7 +92,7 @@
         "影像修圖"
       ],
       "tasksCustom": [
-        "設計排版"
+        "視覺設計排版"
       ],
       "featured": true,
       "description": "Slimca Here 2 是一款超薄的錢包追蹤卡，我們為它設計 Amazon 的商品主圖與 Premium A+ 頁面。畫面以大標題搭配實景，讓賣點在縮圖大小也能**一眼看懂**；再以錢包、旅行與送禮三個情境，讓消費者想像它在自己生活裡的樣子。",
@@ -156,10 +156,6 @@
           "columns": "1",
           "ratio": "原比例"
         }
-      ],
-      "images": [
-        "images/uploads/detail1.svg",
-        "images/uploads/detail2.svg"
       ]
     },
     {
