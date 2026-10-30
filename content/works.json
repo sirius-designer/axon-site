@@ -86,7 +86,9 @@
       "slug": "amazon-slimca-here2",
       "client": "Slimca",
       "categories": [
-        "電商視覺設計"
+        "電商視覺設計",
+        "視覺設計",
+        "品牌設計"
       ],
       "tasks": [
         "影像修圖"
@@ -149,7 +151,8 @@
             "images/uploads/amazon-slimca-here2/amazon-slimca-here2-19.jpg"
           ],
           "columns": "1",
-          "ratio": "原比例"
+          "ratio": "原比例",
+          "gap": "無間距"
         }
       ]
     },
