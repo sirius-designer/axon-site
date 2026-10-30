@@ -75,8 +75,8 @@ main { padding: 72px 56px 96px; min-height: 70vh; max-width: 1440px; margin: 0 a
 .filter button[aria-pressed="true"] { color: var(--ink); background: var(--lime); }
 
 /* Works grid: uneven heights, like a pinned wall */
-.grid { columns: 3 280px; column-gap: 40px; }
-.card { break-inside: avoid; margin-bottom: 56px; display: block; }
+.grid { columns: 3 280px; column-gap: 40px; margin-bottom: -56px; }
+.card { break-inside: avoid; padding-bottom: 56px; display: block; }
 .card img { width: 100%; background: var(--line); transition: opacity .3s; }
 .card:hover img { opacity: .85; }
 .card:hover .ttl { box-shadow: inset 0 -6px 0 var(--lime); }
@@ -87,7 +87,7 @@ main { padding: 72px 56px 96px; min-height: 70vh; max-width: 1440px; margin: 0 a
 .more { display: inline-block; margin-top: 8px; font-size: 14px; border-bottom: 1px solid var(--ink); }
 
 /* Single work */
-.work-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); grid-template-areas: "title ." "meta desc"; column-gap: 56px; row-gap: 28px; align-items: start; margin-bottom: 64px; }
+.work-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); grid-template-areas: "title title" "meta desc"; column-gap: 56px; row-gap: 28px; align-items: start; margin-bottom: 64px; }
 .work-head > div:first-child { display: contents; }
 .work-head h1 { grid-area: title; font-family: var(--serif); font-size: 28px; font-weight: 400; line-height: 1.5; }
 .meta { display: grid; grid-template-columns: auto 1fr; gap: 4px 20px; margin-top: 28px; font-size: 13px; }
