@@ -174,14 +174,14 @@
       ],
       "year": "2026",
       "featured": true,
-      "cover": "images/uploads/sfes-6th-art-expo-2026/sfes-6th-cover.jpg",
+      "cover": "images/uploads/sfes-6th-artclass/sfes-6th-cover.jpg",
       "description": "第六屆藝術才能美術班畢業展以**「藝起狂歡」**為主題，將學習成果化為一場熱鬧的藝術派對。\n主視覺以打開的紅色禮物盒為中心，彩帶向外展開，畫筆、調色盤與孩子們的角色穿插其間，搭配藍、橘、綠與深藍的鮮明配色，以及趣味的標準字設計，展現自由奔放的創作活力。這份歡樂與想像也隨著視覺延伸至各項專案應用，串聯四年在美術班的歡慶回憶。",
       "blocks": [
         {
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-01.jpg"
+            "images/uploads/sfes-6th-artclass/sfes-6th-01.jpg"
           ],
           "columns": "1",
           "ratio": "原比例"
@@ -200,7 +200,7 @@
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-02.jpg"
+            "images/uploads/sfes-6th-artclass/sfes-6th-02.jpg"
           ],
           "columns": "1",
           "ratio": "原比例",
@@ -216,9 +216,9 @@
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-03.jpg",
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-04.jpg",
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-05.jpg"
+            "images/uploads/sfes-6th-artclass/sfes-6th-03.jpg",
+            "images/uploads/sfes-6th-artclass/sfes-6th-04.jpg",
+            "images/uploads/sfes-6th-artclass/sfes-6th-05.jpg"
           ],
           "columns": "3",
           "ratio": "橫式 3:2"
@@ -227,8 +227,8 @@
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-06.jpg",
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-07.jpg"
+            "images/uploads/sfes-6th-artclass/sfes-6th-06.jpg",
+            "images/uploads/sfes-6th-artclass/sfes-6th-07.jpg"
           ],
           "columns": "2",
           "ratio": "正方形 1:1",
@@ -253,7 +253,7 @@
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-08.jpg"
+            "images/uploads/sfes-6th-artclass/sfes-6th-08.jpg"
           ],
           "columns": "1",
           "ratio": "原比例",
@@ -263,7 +263,7 @@
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-09.jpg"
+            "images/uploads/sfes-6th-artclass/sfes-6th-09.jpg"
           ],
           "columns": "1",
           "ratio": "原比例",
@@ -273,8 +273,8 @@
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-10.jpg",
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-11.jpg"
+            "images/uploads/sfes-6th-artclass/sfes-6th-10.jpg",
+            "images/uploads/sfes-6th-artclass/sfes-6th-11.jpg"
           ],
           "columns": "2",
           "ratio": "原比例"
@@ -287,8 +287,8 @@
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-12.jpg",
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-13.jpg"
+            "images/uploads/sfes-6th-artclass/sfes-6th-12.jpg",
+            "images/uploads/sfes-6th-artclass/sfes-6th-13.jpg"
           ],
           "columns": "2",
           "ratio": "正方形 1:1",
@@ -298,9 +298,9 @@
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-14.jpg",
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-15.jpg",
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-16.jpg"
+            "images/uploads/sfes-6th-artclass/sfes-6th-14.jpg",
+            "images/uploads/sfes-6th-artclass/sfes-6th-15.jpg",
+            "images/uploads/sfes-6th-artclass/sfes-6th-16.jpg"
           ],
           "columns": "3",
           "ratio": "橫式 3:2",
@@ -310,7 +310,7 @@
           "type": "split",
           "kindName": "圖文並排",
           "images": [
-            "images/uploads/sfes-6th-art-expo-2026/sfes-6th-17.jpg"
+            "images/uploads/sfes-6th-artclass/sfes-6th-17.jpg"
           ],
           "text": "在一日內完成畢業畫冊裡的作品照、個人照、團體照拍攝，\n用心精細的去背修圖，讓孩子們留下屬於自己的成果回憶紀念。",
           "imageSide": "左"
