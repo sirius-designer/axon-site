@@ -82,17 +82,81 @@
       ]
     },
     {
-      "title": "山嵐茶室．品牌識別",
-      "slug": "shanlan-tea",
-      "client": "山嵐茶室",
+      "title": "Slimca Here 2 電商設計",
+      "slug": "amazon-slimca-here2",
+      "client": "Slimca",
       "categories": [
-        "品牌識別",
-        "品牌設計"
+        "電商視覺設計"
       ],
-      "year": "2026",
+      "tasks": [
+        "影像修圖"
+      ],
+      "tasksCustom": [
+        "設計排版"
+      ],
       "featured": true,
-      "cover": "images/uploads/tea.svg",
-      "description": "為一間以台灣高山茶為主的茶室建立品牌。標誌取自山稜與茶葉的輪廓，色彩來自清晨的霧。",
+      "description": "Slimca Here 2 是一款超薄的錢包追蹤卡，我們為它設計 Amazon 的商品主圖與 Premium A+ 頁面。畫面以大標題搭配實景，讓賣點在縮圖大小也能**一眼看懂**；再以錢包、旅行與送禮三個情境，讓消費者想像它在自己生活裡的樣子。",
+      "blocks": [
+        {
+          "type": "heading",
+          "kindName": "標題",
+          "text": "Amazon 商品主圖，也能一眼看懂"
+        },
+        {
+          "type": "text",
+          "kindName": "文字",
+          "text": "商品主圖要在 Amazon 搜尋結果的小縮圖裡吸引目光，所以每張圖只放一個重點：大標題佔據畫面一側，產品與實景留在另一側。功能以圖示、圓環與箭頭呈現，從手持彎折到充電、防水，都用畫面示範，**讓消費者不用讀完文字就能理解**。"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/amazon-slimca-here2-01.jpg",
+            "images/uploads/amazon-slimca-here2-02.jpg",
+            "images/uploads/amazon-slimca-here2-03.jpg",
+            "images/uploads/amazon-slimca-here2-04.jpg",
+            "images/uploads/amazon-slimca-here2-05.jpg",
+            "images/uploads/amazon-slimca-here2-06.jpg",
+            "images/uploads/amazon-slimca-here2-07.jpg",
+            "images/uploads/amazon-slimca-here2-08.jpg"
+          ],
+          "columns": "2",
+          "ratio": "正方形 1:1"
+        },
+        {
+          "type": "rule",
+          "kindName": "分隔線"
+        },
+        {
+          "type": "heading",
+          "kindName": "標題",
+          "text": "讓消費者，想像它在生活裡"
+        },
+        {
+          "type": "text",
+          "kindName": "文字",
+          "text": "Amazon Premium A+ 頁面延續同一套大標題與實景的版型，依序帶消費者從主視覺、賣點，走進錢包、旅行與送禮三個情境，最後以比較表整理 Here 2 與 AirTag 及其他產品的差異，幫助消費者在 Amazon 上做出選擇。**每個模組只講一件事**，讓整頁讀起來有節奏。"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/amazon-slimca-here2-09.jpg",
+            "images/uploads/amazon-slimca-here2-10.jpg",
+            "images/uploads/amazon-slimca-here2-11.jpg",
+            "images/uploads/amazon-slimca-here2-12.jpg",
+            "images/uploads/amazon-slimca-here2-13.jpg",
+            "images/uploads/amazon-slimca-here2-14.jpg",
+            "images/uploads/amazon-slimca-here2-15.jpg",
+            "images/uploads/amazon-slimca-here2-16.jpg",
+            "images/uploads/amazon-slimca-here2-17.jpg",
+            "images/uploads/amazon-slimca-here2-18.jpg",
+            "images/uploads/amazon-slimca-here2-19.jpg"
+          ],
+          "columns": "1",
+          "ratio": "原比例"
+        }
+      ],
       "images": [
         "images/uploads/detail1.svg",
         "images/uploads/detail2.svg"
