@@ -95,8 +95,19 @@
         "視覺設計排版"
       ],
       "featured": true,
+      "cover": "images/uploads/amazon-slimca-here2/amazon-slimca-here2-cover.jpg",
       "description": "Slimca Here 2 是一款超薄的錢包追蹤卡，我們為它設計 Amazon 的商品主圖與 Premium A+ 頁面。畫面以大標題搭配實景，讓賣點在縮圖大小也能**一眼看懂**；再以錢包、旅行與送禮三個情境，讓消費者想像它在自己生活裡的樣子。",
       "blocks": [
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-collage-01.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-collage-02.jpg"
+          ],
+          "columns": "1",
+          "ratio": "原比例"
+        },
         {
           "type": "heading",
           "kindName": "標題",
@@ -106,22 +117,6 @@
           "type": "text",
           "kindName": "文字",
           "text": "商品主圖要在 Amazon 搜尋結果的小縮圖裡吸引目光，所以每張圖只放一個重點：大標題佔據畫面一側，產品與實景留在另一側。功能以圖示、圓環與箭頭呈現，從手持彎折到充電、防水，都用畫面示範，**讓消費者不用讀完文字就能理解**。"
-        },
-        {
-          "type": "images",
-          "kindName": "圖片",
-          "images": [
-            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-01.jpg",
-            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-02.jpg",
-            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-03.jpg",
-            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-04.jpg",
-            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-05.jpg",
-            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-06.jpg",
-            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-07.jpg",
-            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-08.jpg"
-          ],
-          "columns": "2",
-          "ratio": "正方形 1:1"
         },
         {
           "type": "rule",
