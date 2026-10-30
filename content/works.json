@@ -111,14 +111,14 @@
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/amazon-slimca-here2-01.jpg",
-            "images/uploads/amazon-slimca-here2-02.jpg",
-            "images/uploads/amazon-slimca-here2-03.jpg",
-            "images/uploads/amazon-slimca-here2-04.jpg",
-            "images/uploads/amazon-slimca-here2-05.jpg",
-            "images/uploads/amazon-slimca-here2-06.jpg",
-            "images/uploads/amazon-slimca-here2-07.jpg",
-            "images/uploads/amazon-slimca-here2-08.jpg"
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-01.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-02.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-03.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-04.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-05.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-06.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-07.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-08.jpg"
           ],
           "columns": "2",
           "ratio": "正方形 1:1"
@@ -141,17 +141,17 @@
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/amazon-slimca-here2-09.jpg",
-            "images/uploads/amazon-slimca-here2-10.jpg",
-            "images/uploads/amazon-slimca-here2-11.jpg",
-            "images/uploads/amazon-slimca-here2-12.jpg",
-            "images/uploads/amazon-slimca-here2-13.jpg",
-            "images/uploads/amazon-slimca-here2-14.jpg",
-            "images/uploads/amazon-slimca-here2-15.jpg",
-            "images/uploads/amazon-slimca-here2-16.jpg",
-            "images/uploads/amazon-slimca-here2-17.jpg",
-            "images/uploads/amazon-slimca-here2-18.jpg",
-            "images/uploads/amazon-slimca-here2-19.jpg"
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-09.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-10.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-11.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-12.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-13.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-14.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-15.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-16.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-17.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-18.jpg",
+            "images/uploads/amazon-slimca-here2/amazon-slimca-here2-19.jpg"
           ],
           "columns": "1",
           "ratio": "原比例"
