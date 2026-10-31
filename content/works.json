@@ -318,19 +318,44 @@
       ]
     },
     {
-      "title": "小日麵包．包裝設計",
-      "slug": "xiaori-bakery",
-      "client": "小日麵包",
+      "title": "AXON 品牌識別系統",
+      "slug": "axon-cis",
+      "client": "AXON",
       "categories": [
-        "包裝設計",
-        "品牌設計"
+        "品牌設計",
+        "品牌識別",
+        "視覺設計"
+      ],
+      "tasks": [
+        "LOGO設計",
+        "品牌識別系統"
       ],
       "year": "2025",
+      "order": 11,
       "featured": true,
+      "homeOrder": 10,
       "cover": "images/uploads/bread.svg",
-      "description": "牛皮紙袋搭配單色印章，讓每天出爐的麵包有一致又親切的樣子。",
-      "images": [
-        "images/uploads/detail1.svg"
+      "blocks": [
+        {
+          "type": "heading",
+          "kindName": "標題",
+          "text": "AXON 品牌識別系統",
+          "width": "全幅"
+        },
+        {
+          "type": "text",
+          "kindName": "文字",
+          "text": "AXON 品牌識別系統"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/axon-logo-intro.svg"
+          ],
+          "columns": "1",
+          "ratio": "橫式 3:2"
+        }
       ]
     },
     {
