@@ -334,7 +334,7 @@
       "order": 11,
       "featured": true,
       "homeOrder": 10,
-      "cover": "images/uploads/bread.svg",
+      "cover": "images/uploads/axon-cis/axon-cis-cover.jpg",
       "blocks": [
         {
           "type": "heading",
@@ -351,7 +351,7 @@
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/axon-logo-intro.svg"
+            "images/uploads/axon-cis/axon-logo-intro-loop.svg"
           ],
           "columns": "1",
           "ratio": "橫式 3:2"
