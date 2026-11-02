@@ -335,7 +335,7 @@
       "featured": true,
       "homeOrder": 10,
       "cover": "images/uploads/axon-cis/axon-cis-cover.jpg",
-      "description": "AXON 台灣亞上的品牌識別系統，以**圓形符號與動感字標**為核心，搭配萊姆綠的品牌標語，傳達成為客戶每一天最好的設計夥伴。標誌並以開場動畫呈現，讓品牌在網站與數位媒介上更容易被記住。",
+      "description": "AXON 台灣亞上的品牌識別系統，以**圓形符號與連成一體的字標**為核心，搭配萊姆綠、灰、黑、白四個色彩，並延伸出**點與膠囊**組成的輔助圖形，讓品牌從名片到活動主視覺，都保有一致而明快的辨識度。",
       "blocks": [
         {
           "type": "images",
@@ -355,8 +355,65 @@
         {
           "type": "text",
           "kindName": "文字",
-          "text": "標誌以白色**圓形符號**搭配俐落的字標，線條具有速度感，下方萊姆綠的標語「Your Daily Partner」，說出 AXON 想成為客戶每一天最好的設計夥伴。\n\n開場動畫從排列整齊的圓點開始，變形為方塊與圓形，最後轉化為標誌，再由萊姆綠的光線帶出字標與標語，讓標誌以**動態的方式被記住**。",
+          "text": "開場動畫從排列整齊的圓點開始，變形為方塊與圓形，最後轉化為標誌，由萊姆綠的光線帶出字標與標語「Your Daily Partner」，讓標誌以**動態的方式被記住**。",
           "width": "全幅"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/axon-cis/axon-cis-01.png",
+            "images/uploads/axon-cis/axon-cis-02.png",
+            "images/uploads/axon-cis/axon-cis-03.png"
+          ],
+          "columns": "1",
+          "ratio": "原比例",
+          "gap": "無間距"
+        },
+        {
+          "type": "heading",
+          "kindName": "標題",
+          "text": "相同的角度，連成一個整體"
+        },
+        {
+          "type": "text",
+          "kindName": "文字",
+          "text": "標誌由圓環與 N 組成，N 是兩個相同的半形旋轉 180° 拼合而成；字標的 A、X、O、N 連成一個整體，並與符號共用 55° 的斜線與 15° 的傾斜，讓符號與字標像是**同一個形狀**延伸出來。",
+          "width": "全幅"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/axon-cis/axon-cis-04.png",
+            "images/uploads/axon-cis/axon-cis-05.png"
+          ],
+          "columns": "1",
+          "ratio": "原比例",
+          "gap": "無間距"
+        },
+        {
+          "type": "heading",
+          "kindName": "標題",
+          "text": "點與膠囊，排出品牌的節奏"
+        },
+        {
+          "type": "text",
+          "kindName": "文字",
+          "text": "輔助圖形以 3×3 的圓點為模組，中央放入 AXON 符號，並沿著同一個格線，把相鄰的圓點拉長成膠囊。搭配四個品牌色彩，可以延伸成**圖案、分隔線與主視覺**，用在名片、社群頭像與活動形象上。",
+          "width": "全幅"
+        },
+        {
+          "type": "images",
+          "kindName": "圖片",
+          "images": [
+            "images/uploads/axon-cis/axon-cis-06.png",
+            "images/uploads/axon-cis/axon-cis-07.png",
+            "images/uploads/axon-cis/axon-cis-08.png"
+          ],
+          "columns": "1",
+          "ratio": "原比例",
+          "gap": "無間距"
         }
       ]
     },
