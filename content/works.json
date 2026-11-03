@@ -347,18 +347,6 @@
           "ratio": "橫式 3:2"
         },
         {
-          "type": "heading",
-          "kindName": "標題",
-          "text": "小小的點，也能走成長長的陪伴",
-          "width": "全幅"
-        },
-        {
-          "type": "text",
-          "kindName": "文字",
-          "text": "開場動畫從排列整齊的圓點開始，變形為方塊與圓形，最後轉化為標誌，由萊姆綠的光線帶出字標與標語「Your Daily Partner」，讓標誌以**動態的方式被記住**。",
-          "width": "全幅"
-        },
-        {
           "type": "images",
           "kindName": "圖片",
           "images": [
