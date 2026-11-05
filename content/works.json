@@ -350,29 +350,11 @@
           "type": "images",
           "kindName": "圖片",
           "images": [
-            "images/uploads/axon-cis/axon-cis-01.png",
-            "images/uploads/axon-cis/axon-cis-02.png",
-            "images/uploads/axon-cis/axon-cis-03.png"
-          ],
-          "columns": "1",
-          "ratio": "原比例",
-          "gap": "無間距"
-        },
-        {
-          "type": "images",
-          "kindName": "圖片",
-          "images": [
+            "images/uploads/axon-cis/axon-cis-01-v2.png",
+            "images/uploads/axon-cis/axon-cis-02-v2.png",
+            "images/uploads/axon-cis/axon-cis-03.png",
             "images/uploads/axon-cis/axon-cis-04.png",
-            "images/uploads/axon-cis/axon-cis-05.png"
-          ],
-          "columns": "1",
-          "ratio": "原比例",
-          "gap": "無間距"
-        },
-        {
-          "type": "images",
-          "kindName": "圖片",
-          "images": [
+            "images/uploads/axon-cis/axon-cis-05.png",
             "images/uploads/axon-cis/axon-cis-06.png",
             "images/uploads/axon-cis/axon-cis-07.png",
             "images/uploads/axon-cis/axon-cis-08.png"
