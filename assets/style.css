@@ -269,10 +269,9 @@ footer a:hover { color: var(--ink); }
   .blocks { gap: 40px; }
   .b-heading { font-size: 20px; margin-bottom: -16px; }
   .blocks .w-half, .blocks .w-third { max-width: none; }
-  .b-images.cols-3 { grid-template-columns: 1fr 1fr; }
-  /* 手機版：圖片為奇數張時（最後一排有空格），圖片說明放進空格，不另佔一整排 */
-  .b-images.cols-2 figcaption:nth-child(even),
-  .b-images.cols-3 figcaption:nth-child(even) { grid-column: auto; margin-top: 0; }
+  /* 手機版：2 欄、3 欄圖片區塊改為單欄，一張圖一排；圖片間距 16px（無間距區塊維持 0） */
+  .b-images.cols-2, .b-images.cols-3 { grid-template-columns: 1fr; }
+  .b-images.cols-2:not(.gap-0), .b-images.cols-3:not(.gap-0) { gap: 16px; }
   .b-split { grid-template-columns: 1fr; gap: 20px; }
   .b-split.img-right .b-split-img { order: 0; }
   footer { padding: 24px 20px 80px; }
